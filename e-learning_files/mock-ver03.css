@@ -1,0 +1,851 @@
+/* ============================================================
+   Ver03 Design System
+   ============================================================ */
+
+:root {
+  --v3-accent:      #1daec2;
+  --v3-accent-deep: #0f7884;
+  --v3-bg:          #f0f0ee;
+  --v3-surface:     #ffffff;
+  --v3-border:      #e2e2e2;
+  --v3-row:         #edf8fa;
+  --v3-row-border:  #b8e5ea;
+  --v3-text:        #1d242b;
+  --v3-muted:       #8a9098;
+  --v3-ring-empty:  #d6d6d6;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+body { background: var(--v3-bg); }
+
+.v3-footer {
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 40px;
+}
+.v3-footer__copy {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+.l-main { background: var(--v3-bg); }
+
+.l-main__inner {
+  max-width: 1080px;
+  padding: 26px 24px 60px;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   Header: Title + Summary
+   ============================================================ */
+
+.sub-primary-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.c-primary-head__title {
+  margin: 0;
+  font-size: 3.6rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #0f141a;
+}
+
+.ver03-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 480px;
+  border: 1px solid #d2d2d2;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.ver03-summary__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  border-right: 1px solid #ddd;
+}
+.ver03-summary__item:last-child { border-right: 0; }
+.ver03-summary__label {
+  font-size: 1.3rem;
+  color: #909090;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.ver03-summary__item:nth-child(1) .ver03-summary__label { color: var(--v3-accent); }
+.ver03-summary__item:nth-child(2) .ver03-summary__label { color: var(--v3-accent-deep); }
+.ver03-summary__value {
+  font-size: 4.4rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #929292;
+}
+.ver03-summary__item:nth-child(1) .ver03-summary__value { color: var(--v3-accent); }
+.ver03-summary__item:nth-child(2) .ver03-summary__value { color: var(--v3-accent-deep); }
+.ver03-summary__unit { font-size: 1.4rem; }
+
+/* ============================================================
+   Course List
+   ============================================================ */
+
+.p-study-progress {
+  display: flex;
+  flex-direction: column;
+}
+
+/* アンカー divs — inline style 上書き */
+.p-study-progress > [id^="course-"] {
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden;
+}
+.p-study-progress > [id^="course-"]:not(:first-child) {
+  height: 20px !important;
+  min-height: 20px !important;
+}
+
+/* &nbsp; 余白 p タグを非表示 */
+.p-study-progress-course > p { display: none !important; }
+.p-study-progress-course + p,
+.p-study-progress-course + p + p { display: none !important; }
+
+/* ============================================================
+   Card: Top Section
+   ============================================================ */
+
+.p-study-progress__ttl {
+  background: var(--v3-surface) !important;
+  border: 1px solid var(--v3-border) !important;
+  border-bottom: 1px solid var(--v3-border) !important;
+  border-radius: 10px 10px 0 0 !important;
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 20px !important;
+  align-items: start !important;
+  min-height: 122px !important;
+}
+
+/* 完了コース → ティール枠 */
+/* 100%完了：カード枠を濃いティールに */
+.p-study-progress__ttl:has(.graph.graph-top.is-complete) {
+  border-color: var(--v3-accent-deep) !important;
+}
+.p-study-progress__ttl:has(.graph.graph-top.is-complete) + .p-study-progress-course {
+  border-color: var(--v3-accent-deep) !important;
+}
+
+/* Grid 配置 */
+.p-study-progress__ttl .title {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  display: block !important;
+}
+.p-study-progress__ttl .el-information {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  align-self: start !important;
+}
+.p-study-progress__ttl .v3-top-ring {
+  grid-column: 2 !important;
+  grid-row: 1 / 3 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  align-self: start !important;
+  background: transparent !important;
+}
+
+/* コースタイトル h4 */
+.e-learning .p-study-progress__ttl .title h4 {
+  margin: 0 !important;
+  padding: 4px 0 10px 148px !important;
+  width: auto !important;
+  float: none !important;
+  min-height: 0 !important;
+  display: block !important;
+  font-size: 1.8rem !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* サムネイル */
+.e-learning .p-study-progress__ttl .title h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 90px;
+  border-radius: 6px;
+  background: #dedede;
+}
+.e-learning .p-study-progress__ttl .title h4::after {
+  display: none;
+}
+
+/* .title 内のグラフは非表示（JS で移動済み） */
+.p-study-progress__ttl .title .study__top__graph {
+  display: none !important;
+}
+
+/* v3-top-ring */
+.p-study-progress__ttl .v3-top-ring b { display: none !important; }
+.p-study-progress__ttl .v3-top-ring .statusProgress-sub-graph {
+  display: flex !important;
+  align-items: center;
+  width: auto !important;
+}
+
+/* 概要テキスト */
+.e-learning .p-study-progress__ttl .el-information {
+  padding: 0 0 0 148px !important;
+  background: transparent !important;
+  color: #6a7278 !important;
+  font-size: 1.2rem !important;
+  font-weight: normal;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  display: block !important;
+  box-shadow: none !important;
+}
+.e-learning .p-study-progress__ttl .el-information .image { display: none !important; }
+
+/* ステータスバッジ（JSで .v3-badge として追加） */
+.p-study-progress__ttl .el-information .v3-badge {
+  display: block;
+  width: fit-content;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 2.4rem;
+  background: #ececec;
+  color: #808080;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.p-study-progress__ttl .el-information .v3-badge[data-status="progress"] {
+  background: #d2f2f7;
+  color: var(--v3-accent);
+}
+.p-study-progress__ttl .el-information .v3-badge[data-status="complete"] {
+  background: var(--v3-accent-deep);
+  color: #fff;
+}
+
+/* ============================================================
+   Card: Course Content
+   ============================================================ */
+
+.p-study-progress-course {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+.e-learning .p-study-progress-course {
+  border: 1px solid var(--v3-border) !important;
+  border-top: 0 !important;
+  border-radius: 0 0 10px 10px !important;
+  overflow: hidden;
+}
+.p-study-progress-inner { padding: 0 !important; }
+
+/* ============================================================
+   研修タイトル行
+   ============================================================ */
+
+.e-learning .p-study-progress__content.js-accordion-wrap {
+  background: #fff !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 64px;
+  padding: 10px 16px !important;
+  background: #fff !important;
+  border-bottom: 1px solid var(--v3-border) !important;
+  gap: 10px;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .p-study-progress-course-head-txt {
+  flex: 1;
+  min-width: 0;
+  width: auto !important;
+  margin-right: 0 !important;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: var(--v3-text) !important;
+  line-height: 1.35;
+  margin: 0;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .study__top__graph {
+  flex-shrink: 0;
+  margin-left: 16px !important;
+  margin-right: 0 !important;
+  display: flex !important;
+  align-items: center;
+   width: auto !important;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .study__top__graph b { display: none !important; }
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .graph.graph-top {
+  width: 60px !important;
+  height: 60px !important;
+}
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .graph.graph-top p {
+  font-size: inherit !important;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.v3-ring-pct {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.v3-ring-frac {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8;
+  line-height: 1.2;
+}
+
+/* 折りたたみアイコン（シェブロン ∧/∨） */
+.p-study-progress-course-head__ico {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px;
+  flex-shrink: 0;
+  border: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  cursor: pointer;
+  padding: 0 !important;
+  position: relative;
+  opacity: 0.6;
+  margin-left: 12px !important;
+}
+.p-study-progress-course-head__ico::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #555;
+  border-right: 2px solid #555;
+  top: 9px;
+  left: 6px;
+  transform: rotate(-45deg); /* 上向き ∧ （展開中） */
+  transition: transform 0.2s;
+}
+.p-study-progress-course-head__ico::after { display: none; }
+/* 折りたたみ中（is-open なし）は下向き ∨ */
+.p-study-progress-course-head__ico:not(.is-open)::before {
+  transform: rotate(135deg);
+  top: 5px;
+}
+
+/* ============================================================
+   カテゴリリスト
+   ============================================================ */
+
+.p-study-progress-class { display: none; }
+
+.p-study-progress-class-category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: category-num;
+}
+.p-study-progress-class-category__list { counter-increment: category-num; padding: 0 !important; width: 100% !important;}
+.p-study-progress-class-category__list > .p-study-progress__content {
+  border: 0 !important;
+  border-top: 1px solid var(--v3-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  margin: 0 !important;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head {
+  border-radius: 0 !important;
+}
+
+/* ============================================================
+   水色行（レッスンカテゴリ）
+   ============================================================ */
+
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 52px;
+  padding: 8px 16px !important;
+  background: var(--v3-row) !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--v3-row-border) !important;
+  gap: 8px;
+  position: relative;
+}
+/* 矢印アイコン（展開中：上向き ∧） */
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid #555;
+  border-right: 1.5px solid #555;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: transform 0.2s;
+  margin-bottom: -2px;
+}
+/* 折りたたみ中：下向き ∨ */
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head.v3-cat-closed::after {
+  transform: rotate(135deg);
+  margin-bottom: 2px;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt {
+  display: flex !important;
+  align-items: center !important;
+  flex: 1;
+  min-width: 0;
+  width: auto !important;
+  margin: 0 !important;
+  gap: 10px;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+  flex: 1 !important;
+  font-size: 1.4rem !important;
+  font-weight: normal !important;
+  color: var(--v3-accent-deep) !important;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: none !important;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head__ttl::before {
+  content: "(" counter(category-num) ") ";
+}
+.p-study-progress-class-category__list .p-study-progress-course-head-txt .study__top__graph[style*="visibility:hidden"] {
+  display: none !important;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt .study__top__graph:not([style*="visibility:hidden"]) {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+  width: auto !important;
+}
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .study__top__graph b { display: none !important; }
+
+/* カテゴリタイトルを左、ボタン+%を右端に */
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+  margin-right: auto !important;
+}
+
+/* 「レッスンを始める ›」ボタン */
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt .study__top__graph:not([style*="visibility:hidden"])::before {
+  content: "レッスンを始める ❯";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 6px;
+  background: var(--v3-accent);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* リングは非表示（%はJSで .v3-cat-pct として追加） */
+.p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .graph.graph-top {
+  display: none !important;
+}
+.v3-cat-pct {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--v3-accent-deep);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 3.5em;
+  text-align: right;
+}
+
+/* ============================================================
+   レッスン行
+   ============================================================ */
+
+.p-study-progress-kyotei { padding: 0 !important; border-top: 0; }
+.p-study-progress-kyotei .kyotei-list {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  counter-reset: lesson-num;
+}
+.p-study-progress-kyotei .kyotei-list li:first-child { display: none !important; }
+.p-study-progress-kyotei .kyotei-list li:not(:first-child) {
+  counter-increment: lesson-num;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
+  margin: 0 !important;
+  padding: 10px 16px 10px 28px !important;
+  border-bottom: 1px solid #eaeaea !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+}
+.p-study-progress-kyotei .kyotei-list li:last-child { border-bottom: 0 !important; }
+
+.p-study-progress-kyotei .kyotei-list li:not(:first-child)::before {
+  content: counter(lesson-num);
+  min-width: 24px;
+  height: 24px;
+  line-height: 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--v3-accent);
+  background: #e6f7f9;
+  border-radius: 6px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 4px;
+}
+.p-study-progress-kyotei .kyotei-list li:not(:first-child):has(img[src*="comp"])::before {
+  color: var(--v3-accent-deep);
+}
+/* 右端 %（JSで .v3-lesson-pct として追加） */
+.v3-lesson-pct {
+  margin-left: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--v3-muted);
+  flex-shrink: 0;
+}
+.v3-lesson-pct[data-done="true"] {
+  color: var(--v3-accent-deep);
+}
+.p-study-progress-kyotei .kyotei-list .icon { display: none !important; }
+.p-study-progress-kyotei form {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+.p-study-progress-kyotei form::after { display: none !important; }
+.p-study-progress-kyotei button[type="submit"] {
+  background: transparent;
+  border: 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: normal !important;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+.p-study-progress-kyotei .kyotei-list li:has(img[src*="comp"]) button[type="submit"] {
+  color: var(--v3-accent-deep);
+}
+.p-study-progress-kyotei .kyotei-list li:has(img[src*="comp"]) form::after {
+  background: var(--v3-accent-deep);
+}
+
+/* ============================================================
+   リング（共通）
+   ============================================================ */
+
+.statusProgress-sub-graph > b { display: none !important; }
+/* カテゴリ行のグラフコンテナ内の sub-graph ボックスを非表示 */
+.p-study-progress-class-category__list .study__top__graph .statusProgress-sub-graph {
+  display: contents !important;
+  background: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.graph.graph-top {
+  --progress: 0%;
+  width: 66px !important;
+  height: 66px !important;
+  border-radius: 50%;
+  background: conic-gradient(var(--v3-ring-empty) 0% 100%);
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.graph.graph-top::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+}
+.graph.graph-top.is-progress {
+  background: conic-gradient(var(--v3-accent) 0 var(--progress), var(--v3-ring-empty) var(--progress) 100%);
+}
+.graph.graph-top.is-complete {
+  background: conic-gradient(var(--v3-accent-deep) 0 100%);
+}
+.graph.graph-top .graph__bar { display: none !important; }
+.graph.graph-top p {
+  position: absolute
+  z-index: 2;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7c7c7c;
+  line-height: 1.15;
+  text-align: center;
+}
+.graph.graph-top.is-progress p { color: var(--v3-accent); }
+.graph.graph-top.is-complete p { color: var(--v3-accent-deep); }
+
+/* ============================================================
+   レスポンシブ
+   ============================================================ */
+
+@media (max-width: 1200px) {
+  .l-main__inner { padding: 22px 14px 40px; margin: 0 0 0 0 !important;}
+  .c-primary-head__title { font-size: 3rem; }
+  .ver03-summary { width: 360px; }
+  .ver03-summary__item { min-height: 80px; }
+  .ver03-summary__value { font-size: 3.6rem; }
+}
+/* スマホ用ヘッダーバー */
+.v3-sp-header {
+  display: none;
+}
+@media (max-width: 896px) {
+  .v3-sp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 0 16px;
+    z-index: 200;
+    box-sizing: border-box;
+  }
+  .v3-sp-header__hamburger {
+    font-size: 3.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 0;
+    line-height: 1;
+  }
+  .v3-sp-header__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .v3-sp-header__user {
+    display: flex;
+    align-items: center;
+  }
+  .v3-sp-header__user img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  /* 既存ヘッダーをスマホで非表示 */
+  .l-header { display: none !important; }
+  /* ナビをオーバーレイ表示（直接の子のみ） */
+  .l-content__inner > .l-globalNav {
+    position: fixed !important;
+    top: 52px !important;
+    left: 0 !important;
+    width: 80% !important;
+    max-width: 300px !important;
+    height: calc(100% - 52px) !important;
+    overflow-y: auto !important;
+    background: #fff !important;
+    z-index: 190 !important;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  }
+  .l-content__inner > .l-globalNav.is-sp-open {
+    transform: translateX(0);
+  }
+  /* ヘッダー分の上部余白 */
+  .l-content { padding-top: 52px !important; }
+  /* ページタイトルを非表示（ヘッダーバーに表示するため） */
+  .c-primary-head__title { display: none !important; }
+}
+
+@media (max-width: 896px) {
+  .sub-primary-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .p-study-progress { margin: 0 !important; }
+  .ver03-summary { width: 100%; }
+  .ver03-summary__item { min-height: 70px; }
+  .ver03-summary__value { font-size: 3.2rem; }
+  .ver03-summary__label { font-size: 1.2rem; }
+  .ver03-summary__unit { font-size: 1.2rem; }
+
+  /* コースカード：グリッドを1列に変更して空白をなくす */
+  .p-study-progress__ttl {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .p-study-progress__ttl .v3-top-ring {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-content: flex-end !important;
+    position: absolute !important;
+    right: 12px !important;
+  }
+  .p-study-progress__ttl .title {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  .p-study-progress__ttl .el-information {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+
+  /* コースカード */
+  .e-learning .p-study-progress__ttl .title h4 {
+    padding: 4px 90px 10px 90px !important;
+    font-size: 1.5rem !important;
+    width: auto !important;
+    min-height: calc(15px * 1.4 * 2 + 14px) !important;
+  }
+  .e-learning .p-study-progress__ttl .title h4::before {
+    width: 76px !important;
+    height: 56px !important;
+  }
+  .e-learning .p-study-progress__ttl .title h4::after {
+    left: 20px !important;
+    top: 10px !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .e-learning .p-study-progress__ttl .el-information {
+    padding: 8px 90px 8px 0 !important;
+  }
+  .p-study-progress__ttl {
+    min-height: 0 !important;
+    column-gap: 10px !important;
+  }
+
+  /* 研修タイトル行：タイトル折り返し許可 */
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+    white-space: normal !important;
+    font-size: 1.4rem !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+  }
+
+  /* 研修タイトル行：円グラフを非表示、%テキストのみ表示 */
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .graph.graph-top {
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: auto !important;
+  }
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .graph.graph-top::before {
+    display: none !important;
+  }
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .graph.graph-top p {
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 1px !important;
+  }
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .v3-ring-pct {
+    font-size: 1.4rem !important;
+  }
+  .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .v3-ring-frac {
+    font-size: 1.1rem !important;
+  }
+
+  /* 水色カテゴリ行：2段組レイアウト */
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head {
+    flex-wrap: wrap !important;
+    padding: 8px 12px !important;
+  }
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+    white-space: normal !important;
+    font-size: 1.3rem !important;
+  }
+  /* 水色行：タイトル+%を1行目、ボタンを2行目（grid） */
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto !important;
+    align-items: center !important;
+    gap: 6px 8px !important;
+  }
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head__ttl {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    margin-right: 0 !important;
+    white-space: normal !important;
+  }
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .v3-cat-pct {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    font-size: 1.5rem !important;
+    min-width: 0 !important;
+  }
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt .study__top__graph:not([style*="visibility:hidden"]) {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    margin-left: 0 !important;
+  }
+  .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt .study__top__graph:not([style*="visibility:hidden"])::before {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}

@@ -1,0 +1,4351 @@
+/* このファイルは渉外のemployee.cssから流用しています */
+/* 回り込み解除 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  
+  .clearfix {
+    display: inline-table;
+    min-height: 1%;
+    /* for IE 7*/
+  }
+  
+  /* ページャー */
+  .login-status__list-pagenation .now_page {
+    border: 2px solid #000;
+  }
+  
+  /* モーダルウィンドウ */
+  .haj__modal__contents {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: #FAFAF7;
+    white-space: normal;
+    border-radius: 6px;
+    max-height: 90vh;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .haj__modal__contents {
+      width: 92%;
+    }
+  }
+  
+  .haj__modal__height {
+    padding: 50px 20px 20px;
+    box-sizing: border-box;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .haj__modal__height {
+      height: auto;
+    }
+  }
+  
+  .haj__entry__modal {
+    margin-bottom: 1.5vh;
+    padding: 20px 20px 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 6px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .haj__entry__modal__event-name {
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: 25px;
+    clear: both;
+  }
+  
+  .haj__entry__modal__event-name::after {
+    height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+  
+  .haj__entry__modal__event-name-left {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 22.5%;
+    float: left;
+  }
+  
+  .haj__entry__modal__event-name-right {
+    /* margin-left: 20px; */
+    font-weight: 500;
+    width: 75%;
+    float: right;
+    text-align: left;
+  }
+  
+  .haj__entry__modal__term {
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: 25px;
+    clear: both;
+  }
+  
+  .haj__entry__modal__term::after {
+    height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+  
+  .haj__entry__modal__term-left {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 22.5%;
+    float: left;
+  }
+  
+  .haj__entry__modal__term-right {
+    /* margin-left: 20px; */
+    font-weight: 500;
+    width: 75%;
+    float: right;
+    text-align: left;
+  }
+  
+  .course_student_modal-left {
+    width: auto;
+  }
+  
+  .course_student_modal-right {
+    width: 90%;
+    float: left;
+  }
+  
+  .label_course_name {
+    border-top: 3px solid #333;
+  }
+  
+  .lecture__modal-button {
+    display: inline-flex;
+  }
+  
+  .stu-pagenate-btn {
+    width: 160px;
+    margin-left: auto;
+  }
+  
+  .color_red {
+    color: red;
+  }
+  
+  .color_blue {
+    color: blue;
+  }
+  
+  .color_green {
+    color: green;
+  }
+  
+  .label_subject_name {
+    padding-left: 20px;
+  }
+  
+  .label_tutorial_name {
+    padding-left: 40px;
+  }
+  
+  .fco__entry__modal__event-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .fco__entry__modal__event-content-left {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  
+  .fco__entry__modal__event-content-right {
+    margin-left: 20px;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .fco__entry__modal__event-notice {
+    font-weight: 500;
+  }
+  
+  @media only screen and (max-width: 896px) {
+  
+    .haj__entry__modal__event-name,
+    .haj__entry__modal__term,
+    .fco__entry__modal__event-content {
+      display: block;
+    }
+  
+    .haj__entry__modal__event-name-left,
+    .haj__entry__modal__term-left,
+    .fco__entry__modal__event-content-left {
+      margin-bottom: 10px;
+    }
+  
+    .haj__entry__modal__event-name-left span,
+    .haj__entry__modal__term-left span,
+    .fco__entry__modal__event-content-left span {
+      display: none;
+    }
+  
+    .haj__entry__modal__event-name-right,
+    .haj__entry__modal__term-right,
+    .fco__entry__modal__event-content-right {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+  /* 行政にてモーダルを流用 */
+  .haj__entry__modal__table-caption {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .haj__modal__table {
+    white-space: nowrap;
+    width: 100%;
+    height: 311px;
+    overflow-y: auto;
+    padding: 0 20px 22px 0;
+    box-sizing: border-box;
+  }
+  
+  .haj__modal__table table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    word-break: break-all
+  }
+  
+  .haj__modal__table table th,
+  .haj__modal__table table td {
+    vertical-align: middle;
+    text-align: left
+  }
+  
+  .haj__modal__table table th {
+    padding: 8px 15px
+  }
+  
+  .haj__modal__table table td {
+    font-weight: 500;
+    padding: 16px 15px
+  }
+  
+  .haj__modal__table thead {
+    width: 100%;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626
+  }
+  
+  .haj__modal__table tbody tr {
+    transition: .2s all;
+    border-bottom: 1px solid #e8e8e2
+  }
+  
+  .haj__modal__table tbody tr:nth-child(odd) {
+    background: #fafaf7
+  }
+  
+  .haj__modal__table tbody tr:hover {
+    background: #f4f4e9;
+    cursor: pointer
+  }
+  
+  .haj__modal__save-btn {
+    width: 170px;
+    margin: 0 15px;
+    display: inline-block;
+  }
+  
+  .haj__modal__save-btn::after {
+    display: none !important;
+  }
+  
+  .haj__modal__close-btn {
+    width: 170px;
+    margin: 0 15px;
+    display: inline-block;
+  }
+  
+  .haj__modal__display {
+    display: flex;
+  }
+  
+  .haj__modal__width {
+    width: 100%;
+  }
+  
+  
+  /* Hides from IE-mac \*/
+  * html .clearfix {
+    height: 1%;
+  }
+  
+  .clearfix {
+    display: block;
+  }
+  
+  /* End hide from IE-mac */
+  
+  
+  /* コンテンツの上端位置 */
+  .l-content {
+    margin-top: 80px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .l-content {
+      margin-top: 0;
+    }
+  }
+  
+  /* ヘッダー：FAQ */
+  .l-header-newArrivalFaq__closeArea--jp {
+    background-color: #ED964A;
+  }
+  
+  /* サイドバー：閉じた状態の背景色 */
+  .l-globalNav.is-slide.l-globalNav--jp,
+  .l-globalNav.is-slide .l-globalNav__profile {
+    background-color: #ED964A;
+  }
+  
+  /* サイドバー：サブリスト */
+  .l-globalNav--large .l-globalNav__accordion-desc--indent:last-child {
+    margin-left: 16px;
+  }
+  
+  /* サイドバー：サブリストの未読バッジ */
+  .unread-badge {
+    border-radius: 50%;
+    background: red;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+  }
+  
+  /* サブカラー */
+  .jp-subColor {
+    background-color: #EDC19B;
+  }
+  
+  /* サイドバー：受講生エリア */
+  .l-globalNav__profile--jp {
+    background-image: linear-gradient(90deg, rgba(237, 199, 166, 1.00) 24.36%, rgba(237, 150, 74, 1.00) 70.98%);
+  }
+  
+  /* サイドバー：PFタイトル */
+  .l-globalNav__platform-item--jp {
+    background-image: linear-gradient(90deg, rgba(237, 199, 166, 1.00) 0%, rgba(237, 150, 74, 1.00) 100%);
+  }
+  
+  /* ダッシュボード：ラージメニュー */
+  .p-top-largeMenu {
+    background-color: #ffa758;
+  }
+  
+  /* フッター：追従FAQアイコン */
+  .c-faq-btn--jp {
+    background-color: #ED964A;
+  }
+  
+  /* ダッシュボード：よくある質問（検索ボタン） */
+  .p-top-faq__search-submit {
+    background-color: #ED964A;
+  }
+  
+  /* ダッシュボード：今後の予定（カレンダー確認） */
+  .jp-mainColor {
+    background-color: #ED964A;
+  }
+  
+  /* ダッシュボード：メッセージ（切り替えタグ） */
+  .c-roundTab__item__btn.is-active--jp {
+    background-image: linear-gradient(270deg, rgba(237, 150, 74, 1.00) 0%, rgba(237, 199, 166, 1.00) 100%);
+  }
+  
+  
+  /*-----進捗状況ここから-----*/
+  .statusProgress {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 96vh;
+    background-image: linear-gradient(90deg, rgba(237, 150, 74, 1.00) 24.36%, rgba(237, 199, 166, 1.00) 70.98%);
+    padding: 2.5%;
+    border-radius: 6px;
+  }
+  
+  /*学習進捗上部*/
+  .study__top {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  .study__top h2 {
+    width: 12%;
+    font-size: 2.6rem;
+    color: #fff;
+  }
+  
+  .study__top__graph {
+    display: flex;
+    width: 86%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.30);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .study__top__graph h3 {
+    width: 15%;
+    font-size: 1.6rem
+  }
+  
+  .study__top__graph .statusProgress-sub-graph {
+    width: 42%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .study__top__graph .statusProgress-sub-graph b,
+  .study__top__graph .statusProgress-sub-graph h3 {
+    font-size: 1.4rem;
+    margin-right: 0.663%;
+    white-space: nowrap;
+  }
+  
+  /* コースリスト */
+  .statusProgress-course {
+    width: 20%;
+    height: 275px;
+    background-color: #FFF;
+    float: left;
+    overflow-y: scroll;
+  }
+  
+  /*コースリストのスクロールバー*/
+  .statusProgress-course::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .statusProgress-course::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: #EBEBEA;
+  }
+  
+  .statusProgress-course::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #ED964A;
+  }
+  
+  /*コースリスト中身*/
+  .statusProgress-course li {
+    padding: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .statusProgress-course li h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .statusProgress-date {
+    font-size: 1.2rem;
+    color: #707070;
+  }
+  
+  .statusProgress-course .active h4 {
+    font-weight: 700;
+  }
+  
+  .statusProgress-course .active {
+    background-color: #EFEFE4;
+    font-weight: 700;
+  }
+  
+  /* 講座リスト */
+  .statusProgress-sub {
+    width: 80%;
+    height: 275px;
+    background-color: #FFF;
+    float: left;
+    overflow-y: scroll;
+  }
+  
+  /*講座リストのスクロールバー*/
+  .statusProgress-sub::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .statusProgress-sub::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: #EBEBEA;
+  }
+  
+  .statusProgress-sub::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #ED964A;
+  }
+  
+  /*コース*/
+  .statusProgress-sub .course {
+    display: none;
+    padding: 10px 0 0;
+    background-color: #E0E0D0;
+  }
+  
+  .statusProgress-sub .course.active {
+    display: block;
+  }
+  
+  .course__inner__top {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  
+  /*受講、提出のボタン*/
+  .statusProgress-sub-btn {
+    margin: 0 10px 10px 0;
+    text-align: right;
+  }
+  
+  .statusProgress-sub-btn a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 15px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  .statusProgress-sub-btn a img {
+    margin-left: 5px;
+    height: 1.5rem;
+    width: auto;
+  }
+  
+  /*コースのグラフ部分*/
+  .statusProgress-sub .statusProgress-sub-graph {
+    display: flex;
+    align-items: center;
+  }
+  
+  .statusProgress-sub-graph b {
+    font-size: 1.4rem;
+  }
+  
+  .course__inner__top .graph {
+    width: 85%;
+    margin-right: 10px;
+  }
+  
+  /*コースタイトル*/
+  .course h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .course__inner__top .statusProgress-sub-left {
+    display: block;
+  }
+  
+  /*科目、教程、章などの左部分*/
+  .statusProgress-sub-left {
+    display: flex;
+    width: 40%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    text-align: left;
+    align-items: center;
+  }
+  
+  h4.statusProgress-sub-left {
+    padding-left: 3em;
+  }
+  
+  h5.statusProgress-sub-left {
+    padding-left: 5em;
+  }
+  
+  /*科目、教程、章などの右部分*/
+  .statusProgress-sub-right {
+    width: 60%;
+    text-align: left;
+  }
+  
+  .statusProgress-sub-right b {
+    font-size: 1.2rem;
+  }
+  
+  /*左右横並び*/
+  .inner__flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  /*科目*/
+  .subject {
+    padding: 10px 0 1px;
+    background-color: #EFEFE4;
+    border-top: 1px;
+    border-color: #c2c2c2;
+    border-style: solid;
+  }
+  
+  .subject__inner {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  /*＋ボタン*/
+  .subject__inner:after {
+    content: "＋";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*開いたときにーにかわる*/
+  .subject__inner.open:after {
+    content: "ー";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*教程*/
+  .curriculum {
+    display: none;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    background-color: #E0E0D0;
+    /*min-height: 40px;*/
+  }
+  
+  .curriculum__inner {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /*＋ボタン*/
+  .curriculum__inner:after {
+    content: "＋";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*開いたときにーにかわる*/
+  .curriculum__inner.open:after {
+    content: "ー";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*章*/
+  .chapter {
+    display: none;
+    background-color: #E0E0D0;
+    padding: 10px 0 0;
+    border-top: 1px solid #fff;
+  }
+  
+  .chapter__title {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .chapter__inner {
+    display: none;
+    background-color: #E0E0D0;
+  }
+  
+  /*＋ボタン*/
+  .chapter__title:after {
+    content: "＋";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*開いたときにーにかわる*/
+  .chapter__title.open:after {
+    content: "ー";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /*動画*/
+  .chapter__video {
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+  }
+  
+  .chapter__video .statusProgress-sub-right {
+    margin-right: 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: right;
+  }
+  
+  .chapter__video .statusProgress-sub-right a {
+    color: #000;
+  }
+  
+  .chapter__video .statusProgress-sub-right a span {
+    margin-left: 10px;
+  }
+  
+  /*科目以下グラフ部分*/
+  .graph {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 16px;
+    margin-left: 20px;
+    font-size: 0.75rem;
+    text-align: center;
+    background: #FFFFFF;
+  }
+  
+  .graph-top {
+    width: 77%;
+  }
+  
+  .graph p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  
+  .graph__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #ED964A;
+    color: #ED964A;
+    z-index: 1;
+  }
+  
+  /*科目、教程などのカテゴリー表示（左側）*/
+  .statusProgress-sub_category {
+    margin-right: 10px;
+    padding: 1px 2px;
+    background: #EEA869;
+    font-size: 1.2rem;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  
+  .study__top h2 {
+    width: 100%;
+  }
+  
+  .study__top__graph h3 {
+    width: 100%;
+  }
+  
+  .study__top__graph .statusProgress-sub-graph {
+    width: 100%;
+  }
+  
+  /*----- 新着状況ページ：進捗状況 -----*/
+  
+  .p-study-progress .statusProgress-course {
+    height: auto;
+    min-height: 30vh;
+  }
+  
+  .p-study-progress .statusProgress-sub {
+    height: auto;
+    min-height: 30vh;
+  }
+  
+  /*-----進捗状況ここまで-----*/
+  
+  
+  /*----- 新着状況ページ：進捗状況 -----*/
+  .p-study-progress .study__top h2 {
+    width: 100%;
+  }
+  
+  .p-study-progress .study__top__graph h3 {
+    width: 100%;
+  }
+  
+  .p-study-progress .study__top__graph .statusProgress-sub-graph {
+    width: 112%;
+    display: block;
+  }
+  
+  .p-study-progress .study__top__graph {
+    display: block;
+  }
+  
+  .p-study-progress .statusProgress-course {
+    height: auto;
+    min-height: 20vh;
+  }
+  
+  .p-study-progress .statusProgress-sub {
+    height: auto;
+    min-height: 20vh;
+  }
+  
+  
+  /* 学習進捗 */
+  .p-study-progress__ttl {
+    background-image: linear-gradient(90deg, rgba(237, 199, 166, 1.00) 0%, rgba(237, 150, 74, 1.00) 100%);
+  }
+  
+  /* ラージメニュー アイコン */
+  .p-top-educ-largeMenu__item--eLearning a::before {
+    background: url("/assets/img/edu-c/ico-elearning-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--kousha a::before {
+    background: url("/assets/img/edu-c/ico-kousha-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--calender a::before {
+    background: url("/assets/img/edu-c/ico-calender-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--filebox a::before {
+    background: url("/assets/img/edu-c/ico-filebox-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--info a::before {
+    background: url("/assets/img/edu-c/ico-info-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--message a::before {
+    background: url("/assets/img/edu-c/ico-message-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--eLearningFaq a::before {
+    background: url("/assets/img/edu-c/ico-elearningfaq-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--onlinemessage a::before {
+    background: url("/assets/img/edu-c/ico-onlinemessage-white.svg") center top no-repeat
+  }
+  
+  /* ニュース丸 */
+  .p-top-news__head__circle {
+    background: #ED964A;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 14px;
+  }
+  
+  .p-study-progress-class-category__num {
+  
+    padding-left: 4px;
+    padding-right: 4px;
+  
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-study-progress-class-category__item {
+    width: 24%;
+    margin-right: 1px
+  }
+  
+  /* 2022.04.06 */
+  .p-top-largeMenu__list {
+    gap: 0;
+  }
+  
+  .subject .statusProgress-sub-right,
+  .statusProgress-sub-graph {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  
+  
+  /*学習者トップページ追記*/
+  .l-globalNav__accordion-term--home:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("/assets/img/edu-pb/ico-home-black.svg") center center no-repeat;
+    background-size: contain;
+    vertical-align: middle
+  }
+  
+  .l-globalNav__accordion-term--schedule:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("/assets/img/edu-pb/ico-clock-black.svg") center center no-repeat;
+    background-size: contain;
+    vertical-align: middle
+  }
+  
+  .p-top-progress {
+    margin: 0 0 56px
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .p-top-progress {
+      margin: 0 15px 56px
+    }
+  }
+  
+  .statusProgress {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 96vh;
+    background-image: linear-gradient(to right, #0bb3d6, #0bd69b);
+    padding: 2.5%;
+    border-radius: 6px;
+  }
+  
+  .study__top {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  .study__top h2 {
+    width: 12%;
+    font-size: 2.6rem;
+    color: #fff;
+  }
+  
+  .study__top__graph {
+    display: flex;
+    width: 60%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.30);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .study__top__graph h3 {
+    width: 15%;
+    font-size: 1.6rem
+  }
+  
+  .study__top__graph .statusProgress-sub-graph {
+    width: 42%;
+    display: flex;
+    align-items: center;
+    vertical-align: 3px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .study__top__graph .statusProgress-sub-graph {
+      width: 100%;
+    }
+  }
+  
+  .study__top__graph .statusProgress-sub-graph b,
+  .study__top__graph .statusProgress-sub-graph h3 {
+    font-size: 1.4rem;
+    margin-right: 0.663%;
+    white-space: nowrap;
+  }
+  
+  @media only screen and (max-width: 896px) {
+  
+    .study__top__graph .statusProgress-sub-graph b,
+    .study__top__graph .statusProgress-sub-graph h3 {
+      width: 100%;
+    }
+  }
+  
+  .statusProgress-course {
+    width: 20%;
+    height: 275px;
+    background-color: #FFF;
+    float: left;
+    overflow-y: scroll;
+  }
+  
+  .statusProgress-course::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .statusProgress-course::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: #EBEBEA;
+  }
+  
+  .statusProgress-course::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #ED964A;
+  }
+  
+  .statusProgress-course li {
+    padding: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .statusProgress-course li h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .statusProgress-date {
+    font-size: 1.2rem;
+    color: #707070;
+  }
+  
+  .statusProgress-course .active h4 {
+    font-weight: 700;
+  }
+  
+  .statusProgress-course .active {
+    background-color: #EFEFE4;
+    font-weight: 700;
+  }
+  
+  .statusProgress-sub {
+    width: 80%;
+    height: 275px;
+    background-color: #FFF;
+    float: left;
+    overflow-y: scroll;
+  }
+  
+  @media (orientation: landscape) {
+  
+    /*iPhone etc*/
+    @media only screen and (max-width:896px) {
+      .statusProgress-sub {
+        width: 80%;
+        height: 115px;
+        background-color: #FFF;
+        float: left;
+        overflow-y: scroll;
+      }
+    }
+  
+    /*Garaxy*/
+    @media only screen and (max-width:660px) {
+      .statusProgress-sub {
+        width: 80%;
+        height: 92px;
+        background-color: #FFF;
+        float: left;
+        overflow-y: scroll;
+      }
+    }
+  }
+  
+  .statusProgress-sub::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .statusProgress-sub::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: #EBEBEA;
+  }
+  
+  .statusProgress-sub::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #0bb3d6;
+  }
+  
+  .statusProgress-sub .course {
+    display: none;
+    padding: 10px 0 0;
+    background-color: #E0E0D0;
+  }
+  
+  .statusProgress-sub .course.active {
+    display: block;
+  }
+  
+  .course__inner__top {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  
+  .statusProgress-sub-btn {
+    margin: 0 10px 10px 0;
+    text-align: right;
+  }
+  
+  .statusProgress-sub-btn a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 15px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: #000;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .statusProgress-sub-btn a {
+      display: block;
+      width: 80px;
+      margin-left: auto;
+    }
+  
+    .statusProgress-sub-btn a:first-child {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .statusProgress-sub-btn a img {
+    margin-left: 5px;
+    height: 1.5rem;
+    width: auto;
+  }
+  
+  .statusProgress-sub .statusProgress-sub-graph {
+    display: flex;
+    align-items: center;
+  }
+  
+  .statusProgress-sub-graph b {
+    font-size: 1.4rem;
+  }
+  
+  .course__inner__top .graph {
+    width: 85%;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  
+  .course h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .course__inner__top .statusProgress-sub-left {
+    display: block;
+  }
+  
+  .statusProgress-sub-left {
+    display: flex;
+    width: 40%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    text-align: left;
+    align-items: center;
+  }
+  
+  h4.statusProgress-sub-left {
+    padding-left: 3em;
+  }
+  
+  h5.statusProgress-sub-left {
+    padding-left: 5em;
+  }
+  
+  .statusProgress-sub-right {
+    width: 60%;
+    text-align: left;
+  }
+  
+  .statusProgress-sub-right b {
+    font-size: 1.2rem;
+  }
+  
+  .inner__flex {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+  }
+  
+  .subject {
+    padding: 10px 0 1px;
+    border-top: 1px solid #fff;
+    background-color: #EFEFE4;
+  }
+  
+  .subject__inner {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .subject__inner:after {
+    content: "＋";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .subject__inner.open:after {
+    content: "ー";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .curriculum {
+    display: none;
+    padding: 10px 0 0;
+    border-top: 1px solid #fff;
+    background-color: #E0E0D0;
+  }
+  
+  .curriculum__inner {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .curriculum__inner:after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .curriculum__inner.open:after {
+    content: "-";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .chapter {
+    display: none;
+    background-color: #E0E0D0;
+    padding: 10px 0 0;
+    border-top: 1px solid #fff;
+  }
+  
+  .chapter__title {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .chapter__inner {
+    position: relative;
+    display: none;
+    background-color: #E0E0D0;
+  }
+  
+  .chapter__title:after {
+    content: "��";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .chapter__title.open:after {
+    content: "繝ｼ";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    border: 1px solid #2B2B2B;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #000;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .chapter__video {
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+  }
+  
+  .chapter__video .statusProgress-sub-right {
+    margin-right: 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: right;
+  }
+  
+  .chapter__video .statusProgress-sub-right a {
+    color: #000;
+  }
+  
+  .chapter__video .statusProgress-sub-right a span {
+    margin-left: 10px;
+  }
+  
+  .graph {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 16px;
+    margin-left: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    background: #FFFFFF;
+  }
+  
+  .graph-top {
+    width: 68%;
+  }
+  
+  @media only screen and (max-width: 660px) {
+  
+    /* 01.25更新 */
+    .graph-top {
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 896px) {
+  
+    /* 01.17更新 */
+    .graph-top {
+      width: 60%;
+    }
+  }
+  
+  .graph p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  
+  .graph__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #0bb3d6;
+    color: #0bb3d6;
+    z-index: 1;
+  }
+  
+  .statusProgress-sub_category {
+    margin-right: 10px;
+    padding: 1px 2px;
+    background: #0bb3d6;
+    font-size: 1.2rem;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  .study__top h2 {
+    width: 100%;
+  }
+  
+  .study__top__graph h3 {
+    width: 100%;
+  }
+  
+  .study__top__graph .statusProgress-sub-graph {
+    width: 100%;
+  }
+  
+  .p-study-progress .statusProgress-course {
+    height: auto;
+    min-height: 30vh;
+  }
+  
+  .p-study-progress .statusProgress-sub {
+    height: auto;
+    min-height: 30vh;
+  }
+  
+  .p-study-progress .study__top h2 {
+    width: 100%;
+  }
+  
+  .p-study-progress .study__top__graph h3 {
+    width: 100%;
+  }
+  
+  .p-study-progress .study__top__graph .statusProgress-sub-graph {
+    display: block;
+  }
+  
+  .p-study-progress .study__top__graph {
+    width: 42%;
+    display: block;
+  }
+  
+  .study__top__graph_2 {
+    width: 50%;
+    display: block;
+  }
+  
+  .p-study-progress .statusProgress-course {
+    height: auto;
+    min-height: 20vh;
+  }
+  
+  .p-study-progress .statusProgress-sub {
+    height: auto;
+    min-height: 20vh;
+  }
+  
+  .p-study-progress__ttl {
+    background-image: linear-gradient(90deg, rgba(237, 199, 166, 1.00) 0%, rgba(237, 150, 74, 1.00) 100%);
+  }
+  
+  .p-top-educ-largeMenu__item--eLearning a::before {
+    background: url("/assets/img/edu-c/ico-elearning-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--kousha a::before {
+    background: url("/assets/img/edu-c/ico-kousha-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--calender a::before {
+    background: url("/assets/img/edu-c/ico-calender-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--filebox a::before {
+    background: url("/assets/img/edu-c/ico-filebox-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--info a::before {
+    background: url("/assets/img/edu-c/ico-info-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--message a::before {
+    background: url("/assets/img/edu-c/ico-message-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--eLearningFaq a::before {
+    background: url("/assets/img/edu-c/ico-elearningfaq-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--onlinemessage a::before {
+    background: url("/assets/img/edu-c/ico-onlinemessage-white.svg") center top no-repeat
+  }
+  
+  .p-top-educ-largeMenu__item--communication a::before {
+    background: url("/assets/img/edu-pb/ico-people-white.svg") center top no-repeat
+  }
+  
+  .p-study-progress-class-category__num {
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-study-progress-class-category__item {
+    width: 24%;
+    margin-right: 1px
+  }
+  
+  .p-top-largeMenu__list {
+    gap: 0;
+  }
+  
+  .subject .statusProgress-sub-right,
+  .statusProgress-sub-graph {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .p-study-progress__content.js-accordion-wrap {
+    background-color: #EFEFE4;
+  }
+  
+  .p-study-progress-class-category__dfn--white {
+    background-color: #DDDDDD;
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .l-globalNav {
+      background-color: #FAFAF7;
+    }
+  
+    .l-globalNav__desc--logout a {
+      padding: 4px 8px 12px 0;
+    }
+  
+    .graph p {
+      font-size: 150%;
+    }
+  
+    #top_statusProgress .study__top {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #top_statusProgress .study__top h2 {
+      font-size: 2.0rem;
+      text-align: center;
+    }
+  
+    #top_statusProgress .study__top__graph {
+      margin-top: 1.6rem;
+      width: 100%;
+    }
+  
+    .statusProgress-course {
+      width: 100%;
+      height: auto;
+    }
+  
+    .statusProgress-sub {
+      width: 100%;
+    }
+  
+    .course__inner__top {
+      flex-wrap: wrap;
+    }
+  
+    .course__inner__top .statusProgress-sub-left {
+      width: 100%;
+    }
+  
+    .course__inner__top .statusProgress-sub-right {
+      width: 100%;
+    }
+  
+    .course__inner__top .statusProgress-sub-btn {
+      margin-top: -1.6rem;
+    }
+  
+    .course__inner__top .statusProgress-sub-graph {
+      flex-wrap: wrap;
+    }
+  
+    .course__inner__top .statusProgress-sub-graph b {
+      width: 95%;
+      margin: -1.2rem auto 0;
+    }
+  
+    .course__inner__top .statusProgress-sub-graph figure {
+      width: 95%;
+      margin: 0.4rem auto 0;
+    }
+  
+    .subject__inner {
+      flex-wrap: wrap;
+    }
+  
+    .subject__inner::after,
+    .subject__inner.open::after {
+      top: 15%;
+    }
+  
+    .subject__inner .statusProgress-sub-left {
+      width: 100%;
+      padding-right: 17.5%;
+    }
+  
+    .subject__inner .statusProgress-sub-right {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .subject__inner .statusProgress-sub-right b {
+      width: 95%;
+      margin: 0.8rem auto 0;
+    }
+  
+    .subject__inner .statusProgress-sub-right figure {
+      width: 95%;
+      margin: 0.4rem auto 0;
+    }
+  
+    .curriculum__inner {
+      flex-wrap: wrap;
+    }
+  
+    .curriculum__inner .statusProgress-sub-left {
+      width: 100%;
+    }
+  
+    .curriculum__inner .statusProgress-sub-right {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .curriculum__inner .statusProgress-sub-right b {
+      width: calc(97% - 3.6rem);
+      margin: 0.8rem 0 0 3.6rem;
+    }
+  
+    .curriculum__inner .statusProgress-sub-right figure {
+      width: calc(97% - 3.6rem);
+      margin: 0.4rem 0 0 3.6rem;
+    }
+  
+    .p-study-progress-class-category__list {
+      flex-grow: 0;
+      justify-content: flex-start;
+    }
+  
+    .p-study-progress-class-category__item {
+      width: 33.06%;
+      flex-grow: 0;
+    }
+  
+    .p-study-progress-class-category__num {
+      width: 100%;
+    }
+  
+    .curriculum {
+      height: inherit !important;
+      padding-bottom: 10px;
+    }
+  
+    .chapter {
+      flex-wrap: wrap;
+    }
+  
+    ._chapter__inner_ {
+      flex-wrap: wrap;
+    }
+  
+    ._chapter__inner_ .statusProgress-sub-left {
+      width: 100%;
+    }
+  
+    ._chapter__inner_ .statusProgress-sub-right {
+      width: 100%;
+    }
+  
+    ._chapter__inner_ .statusProgress-sub-right b {
+      /*width: calc(97% - 4.8rem);*/
+      margin: -0.3rem 0 0 7rem;
+    }
+  
+    ._chapter__inner_ .statusProgress-sub-right figure {
+      width: calc(97% - 9rem);
+      margin: 0.4rem;
+    }
+  
+    /*    ._chapter__inner_ .statusProgress-sub-right figure {
+        width: ;
+        margin: 0.4rem;
+      }*/
+    .statusProgress-sub-right b {
+      width: 1.8rem;
+    }
+  
+  }
+  
+  .p-top-faq__search-submit {
+    width: 60px;
+    height: 40px;
+    font-size: 1.4rem;
+    padding: 11px 16px;
+    line-height: 20px;
+    background: #44c0e2;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer
+  }
+  
+  .p-top-news__head__circle {
+    background: #0bb3d6;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 14px
+  }
+  
+  
+  .p-top-service1 {
+    padding: 4px;
+    text-align: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0bd69b, #0bb3d6);
+    margin-bottom: 56px
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .p-top-service1 {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+  
+  .p-top-service__ttl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 98%;
+    margin: 0 auto;
+    padding: 13px 0;
+    /*margin-bottom: 32px;*/
+    font-size: 1.5rem;
+    font-family: "NotoSansJP", sans-serif;
+    font-weight: 700;
+    border-radius: 20px 20px 0 0;
+    color: #fff
+  }
+  
+  .p-top-service__ttl--gradient {
+    background: linear-gradient(to right, #0bd69b, #0bb3d6)
+  }
+  
+  .p-top-service__span--basic2 {
+    color: #0bb3d6
+  }
+  
+  .p-top-service-content1 {
+    padding: 32px 16px 30px;
+    background-color: #fafaf7;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  .p-top-service-btn {
+    width: 217px;
+    margin: 0 auto
+  }
+  
+  .p-top-largeMenu {
+    background: #44c0e2 !important;
+    width: 100%;
+    color: #fff;
+    padding: 20px 0 28px;
+    transition: all .2s;
+    margin-top: -24px
+  }
+  
+  .p-top-largeMenu__item--communication a::before {
+    background: url("/assets/img/edu-pb/ico-people-white.svg") center top no-repeat
+  }
+  
+  .l-globalNav__platform-item--jp {
+    background: linear-gradient(to right, #a5d8e6, #44c0e2)
+  }
+  
+  
+  .ha-top-progress {
+    margin: 56px 0;
+  }
+  
+  .ha-top-progress__wrapper {
+    border-radius: 6px;
+    padding: 24px;
+  }
+  
+  .ha-top-progress-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+  
+  .ha-top-progress-head__ttl {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  .ha-top-progress-head__ttl .font-size-m {
+    margin-left: 10px;
+    font-size: 1.4rem;
+  }
+  
+  .ha-top-progress-head__ttl .font-size-s {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .ha-top-progress-head__select {
+    width: 48%;
+  }
+  
+  .ha-top-progress__bottom {
+    position: relative;
+    padding: 0 12px;
+    overflow: visible;
+  }
+  
+  .ha-top-progress__foot--multi {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ha-top-progress__foot-wrapper {
+    background: #fafaf7;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  
+  .ha-top-progress__foot-wrapper--total-people {
+    width: 48%;
+  }
+  
+  .ha-top-progress__content-head {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+  }
+  
+  .ha-top-progress__content-head--multi {
+    justify-content: space-between;
+  }
+  
+  .ha-top-progress__content-ttl {
+    margin: 0 32px 0 0;
+    font-size: 1.8rem;
+  }
+  
+  .ha-top-progress__content-ttl--multi {
+    margin: 0 16px 0 0;
+  }
+  
+  .ha-top-progress__content-total {
+    background: #efefe4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 173px;
+    padding: 0 4.1%;
+    margin: 0 1.7% 0 0;
+  }
+  
+  .ha-top-progress__content-total--multi {
+    margin: 0 0 16px;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 0;
+    padding: 6px 16px;
+  }
+  
+  .ha-top-progress__content-total-people {
+    font-size: 1.4rem;
+    margin: 0 0 12px;
+  }
+  
+  .ha-top-progress__content-total-people span {
+    margin-right: 4px;
+  }
+  
+  .ha-top-progress__content-total-people span:last-child {
+    margin: 0;
+  }
+  
+  .ha-top-progress__content-total-people--multi {
+    margin: 0 16px 0 0;
+  }
+  
+  .ha-top-progress__content-total-large {
+    font-family: "Lato", sans-serif;
+    font-size: 2.6rem;
+  }
+  
+  .ha-top-progress__content-detail {
+    flex: 1;
+    background: #efefe4;
+    border-radius: 6px;
+    padding: 16px 16px 42px;
+    position: relative;
+  }
+  
+  .ha-top-progress__content-detail--multi {
+    position: relative;
+    margin: 0;
+    padding: 16px 16px 32px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .ha-top-progress {
+      margin: 0 15px 56px;
+    }
+  
+    .p-top-progress__wrapper {
+      padding: 24px 16px;
+      overflow: hidden;
+    }
+  
+    .ha-top-progress-head {
+      flex-direction: column;
+      margin-bottom: 12px;
+      max-width: 100%;
+    }
+  
+    .ha-top-progress-head__select {
+      margin-top: 8px;
+      width: 100%;
+    }
+  
+    .ha-top-progress__bottom {
+      padding: 0 10px;
+    }
+  
+    .ha-top-progress__foot--multi {
+      align-items: center;
+    }
+  
+    .ha-top-progress__foot-wrapper {
+      padding: 20px 0;
+    }
+  
+    .ha-top-progress__foot-wrapper--total-people {
+      padding: 20px;
+    }
+  
+    .ha-top-progress__content-head {
+      display: block;
+      margin: 0 16px 16px;
+    }
+  
+    .ha-top-progress__content-head--multi {
+      margin: 0 0 16px;
+    }
+  
+    .ha-top-progress__content-ttl {
+      flex-shrink: 0;
+      margin: 0 0 8px;
+    }
+  
+    .ha-top-progress__content-total {
+      margin: 0 16px 16px;
+      min-height: 0;
+      padding: 8px 16px;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  
+    .ha-top-progress__content-total--multi {
+      margin: 0 0 16px;
+      padding: 6px 15px;
+    }
+  
+    .ha-top-progress__content-total-people {
+      margin: 0;
+    }
+  
+    .ha-top-progress__content-total-large {
+      font-size: 2.2rem;
+    }
+  
+    .ha-top-progress__content-detail {
+      margin: 0 16px;
+    }
+  }
+  
+  .p-top-progress-left__prev,
+  .p-top-progress-left__next {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    background-size: 8px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 24px
+  }
+  
+  .p-top-progress-left__prev:hover,
+  .p-top-progress-left__next:hover {
+    opacity: .6
+  }
+  
+  .p-top-progress-left__prev {
+    background-image: url("/assets/img/common/ico-arrow-black-left.svg");
+    left: -5px
+  }
+  
+  .p-top-progress-left__next {
+    background-image: url("/assets/img/common/ico-arrow-black-right.svg");
+    right: -5px
+  }
+  
+  .p-top-progress-right__prev,
+  .p-top-progress-right__next {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    background-size: 8px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 24px
+  }
+  
+  .p-top-progress-right__prev:hover,
+  .p-top-progress-right__next:hover {
+    opacity: .6
+  }
+  
+  .p-top-progress-right__prev {
+    background-image: url("/assets/img/common/ico-arrow-black-left.svg");
+    left: -5px
+  }
+  
+  .p-top-progress-right__next {
+    background-image: url("/assets/img/common/ico-arrow-black-right.svg");
+    right: -5px
+  }
+  
+  
+  .ha-top-notice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 12px 24px;
+    border: 1px solid #FF0000;
+    border-radius: 6px;
+    background-color: #FAF8F7;
+  }
+  
+  .ha-top-notice__wrap {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ha-top-notice__left,
+  .ha-top-notice__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ha-top-notice__circle {
+    background: #E6183F;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 14px
+  }
+  
+  .ha-top-notice__category {
+    width: 40px;
+    margin-right: 10px;
+    border: 1px solid #FF0000;
+    font-size: 1.2rem;
+    color: #E6183F;
+    text-align: center;
+  }
+  
+  .ha-top-notice__number {
+    font-size: 2rem;
+    color: #E6183F;
+  }
+  
+  .ha-top-notice__number span {
+    font-size: 1.4rem;
+  }
+  
+  .ha-top-notice__text {
+    margin-right: 25px;
+  }
+  
+  .ha-top-notice__link {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    background: #eaeadc;
+    display: inline-block;
+    margin-left: auto;
+  }
+  
+  .ha-top-notice__link:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 10px;
+    background: url("/assets/img/common/ico-arrow-black-right.svg") center center no-repeat
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .ha-top-notice {
+      margin: 0 15px 30px;
+    }
+  
+    .ha-top-studyProgress__prev,
+    .ha-top-studyProgress__next {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: auto;
+      z-index: 1;
+      cursor: pointer;
+      background-size: 8px 12px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 16px;
+      height: 24px
+    }
+  
+    .ha-top-studyProgress__prev:hover,
+    .ha-top-studyProgress__next:hover {
+      opacity: .6
+    }
+  
+    .ha-top-studyProgress__prev {
+      background-image: url("/assets/img/common/ico-arrow-black-left.svg");
+      left: -2px
+    }
+  
+    .ha-top-studyProgress__next {
+      background-image: url("/assets/img/common/ico-arrow-black-right.svg");
+      right: -2px
+    }
+  }
+  
+  @media only screen and (max-width: 896px)and (max-width: 374px) {
+    .ha-top-studyProgress__prev {
+      left: -8px
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .ha-top-notice__wrap {
+      display: block;
+    }
+  
+    .ha-top-notice__left {
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  
+  .breadcramb ul {
+    display: flex;
+  }
+  
+  .breadcramb ul li {
+    margin-right: 10px;
+  }
+  
+  .breadcramb-home {
+    color: #0BB3D6;
+  }
+  
+  .breadcramb {
+    margin-bottom: 30px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .breadcramb {
+      display: none;
+    }
+  }
+  
+  /* 共通フォーム */
+  .edu_pb-form {
+    margin: 0 0 30px;
+    padding: 35px 0 35px;
+    background-color: #FAFAF7;
+    border-radius: 6px;
+  }
+  
+  .edu_pb-form-ha__select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .edu_pb-form-ha__select-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .edu_pb-form-ha__select-inner p {
+    width: 45%;
+    text-align: right;
+  }
+  
+  .edu_pb-form-ha__select-box-width {
+    width: 50%;
+  }
+  
+  .edu_pb-form__middle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .edu_pb-form__middle-form {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .edu_pb-form__middle-form p {
+    width: 45%;
+    text-align: right;
+  }
+  
+  .edu_pb-form__middle-form-box {
+    width: 50%;
+  }
+  
+  .edu_pb-form__middle-form-box label {
+    margin-right: 5px;
+  }
+  
+  .edu_pb-form__middle-box-width {
+    width: 80%;
+  }
+  
+  .edu_pb-form__btn {
+    width: 160px;
+    margin: 0 15px;
+  }
+  
+  .edu_pb-form__btn2 {
+    width: 160px;
+  }
+  
+  .edu_pb-form-fc__select {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .edu_pb-form-fc__select-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .edu_pb-form-fc__select-tag-left {
+    width: 45%;
+    text-align: right;
+  }
+  
+  .edu_pb-form-fc__select-tag-right {
+    width: 45%;
+    display: flex;
+    text-align: left;
+  }
+  
+  .edu_pb-form-fc__select-tag-inner {
+    margin-left: auto;
+  }
+  
+  .edu_pb-form-fc__select-box-width,
+  .edu_pb-form-fc__select-auto {
+    width: 50%;
+  }
+  
+  @media screen and (max-width: 896px) {
+    .edu_pb-form {
+      margin: 0 20px 30px;
+      padding: 35px 20px 35px;
+    }
+  
+    .edu_pb-form-ha__select-inner {
+      display: block;
+      width: 100%;
+    }
+  
+    .edu_pb-form-ha__select-inner p {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  
+    .edu_pb-form-ha__select-box-width {
+      width: 100%;
+    }
+  
+    .edu_pb-form__middle {
+      display: block;
+    }
+  
+    .edu_pb-form__middle-form {
+      display: block;
+      width: 100%;
+    }
+  
+    .edu_pb-form__middle-form p {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  
+    .edu_pb-form__middle-form-box,
+    .edu_pb-form__middle-box-width {
+      width: 100%;
+    }
+  
+    .edu_pb-form-fc__select {
+      display: block;
+    }
+  
+    .edu_pb-form-fc__select-inner {
+      width: 100%;
+    }
+  
+    .edu_pb-form-fc__select-inner:first-child {
+      display: block;
+      margin-bottom: 20px;
+    }
+  
+    .edu_pb-form-fc__select-inner:last-child {
+      justify-content: flex-start;
+    }
+  
+    .edu_pb-form-fc__select-tag-left {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  
+    .edu_pb-form-fc__select-box-width {
+      width: 100%;
+    }
+  
+    .edu_pb-form-fc__select-tag-right {
+      width: auto;
+    }
+  
+    .edu_pb-form-fc__select-tag-inner {
+      margin-right: 30px;
+      margin-left: 0;
+    }
+  
+    .edu_pb-form-fc__select-auto {
+      width: auto;
+    }
+  }
+  
+  /* フォーム：1列 */
+  .edu_pb-form-one_column {
+    display: block;
+    padding: 0 56px;
+    margin-bottom: 25px;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form {
+    width: 100%;
+    display: block;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form p {
+    width: 22.5%;
+    text-align: left;
+    float: left;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form-box {
+    width: 75%;
+    text-align: left;
+    float: right;
+    position: relative;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form-box b {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 1%;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form-fc__select-inner {
+    margin-bottom: 25px;
+  }
+  
+  .edu_pb-form-one_column .p-regist__data__input-ss {
+    width: 25%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  /* 検索フォーム */
+  .search {
+    margin: 0 0 40px;
+    padding: 20px 10px 0;
+    background-color: #FAFAF7;
+    border-radius: 6px;
+  }
+  
+  .search-inner {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  }
+  
+  .search__contents {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* width: 33%; */
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+  
+  .search__contents-width {
+    /* width: 31%; */
+  }
+  
+  .search__checkbox-width {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .search__checkbox-width dd label {
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+  
+  @media only screen and (max-width: 1250px) {
+    .search__contents {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .search-inner {
+      display: block;
+    }
+  
+    .search__contents {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .search__tag {
+    width: 70px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .search__tag-login {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .search__checkbox-tag {
+    width: 85px;
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .box-width {
+    /* width: 206px; */
+  }
+  
+  .checkbox-width {
+    width: 70%;
+  }
+  
+  .select-width {
+    width: 206px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+  
+    .search__tag,
+    .search__checkbox-tag,
+    .search__tag-login {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  
+    .box-width,
+    .prefecture-select-width,
+    .sv-select-width,
+    .valid-select-width,
+    .select-width,
+    .checkbox-width {
+      width: 100%;
+    }
+  }
+  
+  .login-status__search-btn {
+    margin-bottom: 50px;
+  }
+  
+  .change-pass-btn {
+    margin-bottom: 20px;
+  }
+  
+  .password-reset-btn {
+    width: 160px;
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  
+  .login-status__register-btn,
+  .stu-download-btn {
+    width: 160px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .password-reset-btn {
+      margin-top: 20px;
+      margin-right: auto;
+    }
+  
+    .login-status__register-btn,
+    .stu-download-btn {
+      margin-top: 20px;
+      margin-right: auto;
+    }
+  }
+  
+  #modal-content-pwd {
+    width: 40%;
+    margin: 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    position: fixed;
+    display: none;
+    z-index: 2;
+    vertical-align: middle;
+    background: #FAFAF7;
+    white-space: normal;
+    border-radius: 6px;
+    max-height: 90vh;
+  }
+  
+  #modal_header {
+    margin-bottom: 5px;
+  }
+  
+  .icon-position {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e5e5d5;
+    padding: 1px 5px;
+  }
+  
+  #close-icom {
+    vertical-align: middle;
+  }
+  
+  #modal-overlay {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+  }
+  
+  #modal_main {
+    margin-bottom: 1.5vh;
+    padding: 20px 20px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 6px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  #modal_pwd {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #modal_pwd > div {
+    font-size: 24px;
+  }
+
+  #modal_pwd > span {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  #modal_footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .button-link {
+    color: #00f;
+    text-decoration: underline;
+  }
+  
+  .button-link:hover {
+    cursor: pointer;
+    color: #f00;
+  }
+  
+  /* 一覧：表示件数 */
+  .displayNum {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 20px;
+  }
+  
+  .displayNum__left-pagenation {
+    display: flex;
+  }
+  
+  .displayNum__left {
+    display: flex;
+  }
+  
+  .displayNum__left-number {
+    margin-left: 10px;
+  }
+  
+  .displayNum__left-previous {
+    margin-left: 40px;
+  }
+  
+  .displayNum__left-previous span {
+    margin-left: 5px;
+    text-decoration: underline;
+  }
+  
+  .displayNum__left-next {
+    margin-left: 40px;
+  }
+  
+  .displayNum__left-next span {
+    margin-right: 5px;
+    text-decoration: underline;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .displayNum {
+      margin: 0 20px 20px;
+      display: block;
+    }
+  
+    .displayNum__left {
+      margin-bottom: 20px;
+    }
+  
+    .displayNum__left-previous,
+    .displayNum__left-next {
+      margin-left: 20px;
+    }
+  }
+  
+  .displayNum__right {
+    display: flex;
+    align-items: center;
+    max-width: 172px;
+    margin-left: auto
+  }
+  
+  .list-pagenation {
+    margin-bottom: 100px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .displayNum__right {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  
+  /* 一覧表 */
+  .list__table {
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 22px;
+    margin: 0 0 20px 0;
+  }
+  
+  .company__list__table table {
+    /* white-space: initial !important; */
+    word-break: keep-all !important;
+    white-space: normal !important;
+  }
+  
+  .company__list__table--button a:nth-child(n + 2) {
+    margin-left: 0 !important;
+  }
+  
+  .company__list__table--button {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company__edit--button {
+    width: 100%;
+  }
+  
+  .company__edit--button:first-child {
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .list__table {
+      margin: 0 20px 100px;
+    }
+  }
+  
+  .list__table table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    word-break: break-all
+  }
+  
+  .list__table table th,
+  .list__table table td {
+    vertical-align: middle;
+    text-align: left
+  }
+  
+  .list__table table th {
+    padding: 8px 15px
+  }
+  
+  .list__table table th:last-child {
+      position: sticky;
+      top: 0;
+      right: 0;
+  }
+  
+  .list__table table th:last-child:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #fff;
+      border-left: solid 1px  #000;
+  }
+  
+  .list__table--action {
+      position: sticky;
+      top: 0;
+      right: 0;
+  }
+  
+  .list__table--action:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-left: solid 1px  #e8e8e2;
+  }
+  
+  .list__table--action-hover:before {
+      background: #f4f4e9 !important;
+      transition-duration: 0.1s;
+  }
+  
+  .list__table tbody tr:nth-child(odd) .list__table--action:before {
+      background: #fafaf7;
+      transition-duration: 0.1s;
+  }
+  
+  .list__table tbody tr:nth-child(even) .list__table--action:before {
+      background: #fff;
+      transition-duration: 0.1s;
+  }
+  
+  .list__table table td {
+    font-weight: normal;
+    padding: 20px
+  }
+  
+  .list__table thead {
+    width: 100%;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626
+  }
+  
+  .list__table tbody tr {
+    transition: .2s all;
+    border-bottom: 1px solid #e8e8e2
+  }
+  
+  .list__table tbody tr:nth-child(odd) {
+    background: #fafaf7
+  }
+  
+  .list__table tbody tr:hover {
+    background: #f4f4e9;
+  }
+  
+  .list__table .button {
+    border: 2px solid #5F5F5F;
+    background-color: #FFF;
+    text-align: center;
+  }
+  
+  .list__table .button_green {
+    padding: 6px;
+    background: linear-gradient(to right, #0bd69b, #0bb3d6);
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .form__table {
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: #fff;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .form__table {
+      margin: 0;
+    }
+  }
+  
+  .form__table table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    word-break: break-all
+  }
+  
+  .form__table table th,
+  .form__table table td {
+    vertical-align: middle;
+    text-align: left
+  }
+  
+  .form__table table th {
+    padding: 8px 15px
+  }
+  
+  .form__table table td {
+    font-weight: 500;
+    padding: 16px 15px
+  }
+  
+  .form__table thead {
+    width: 100%;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626
+  }
+  
+  .form__table tbody tr {
+    transition: .2s all;
+    border-bottom: 1px solid #e8e8e2
+  }
+  
+  .form__table tbody tr:nth-child(odd) {
+    background: #fafaf7
+  }
+  
+  .form__table tbody tr:hover {
+    background: #f4f4e9;
+  }
+  
+  .side-modal-table__table {
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: #fff;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .side-modal-table__table {
+      margin: 0;
+    }
+  }
+  
+  .side-modal-table__table table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    word-break: break-all
+  }
+  
+  .side-modal-table__table table th,
+  .side-modal-table__table table td {
+    vertical-align: middle;
+    text-align: left
+  }
+  
+  .side-modal-table__table table th {
+    padding: 8px 15px
+  }
+  
+  .side-modal-table__table table td {
+    font-weight: 500;
+    padding: 16px 15px
+  }
+  
+  .side-modal-table__table thead {
+    width: 100%;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626
+  }
+  
+  .side-modal-table__table tbody tr {
+    transition: .2s all;
+    border-bottom: 1px solid #e8e8e2
+  }
+  
+  .side-modal-table__table tbody tr:nth-child(odd) {
+    background: #fafaf7
+  }
+  
+  .side-modal-table__table tbody tr:hover {
+    background: #f4f4e9;
+  }
+  
+  .button_green2 {
+    padding: 2px;
+    background: linear-gradient(to right, #0bd69b, #0bb3d6);
+    text-align: center;
+    color: white;
+  }
+  
+  /* .list__table--button {
+    display: flex;
+    justify-content: center;
+    min-width: none;
+  } */
+  .list__table--button a {
+    display: inline-block;
+    min-width: 70px;
+  }
+  
+  .list__table--button a:nth-child(n + 2) {
+    margin-left: 10%;
+  }
+  
+  .list__table .button_red {
+    padding: 6px;
+    background: linear-gradient(to right, #d6a20b, #d60b0b);
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .list__table .button_orange {
+    padding: 6px;
+    background: linear-gradient(to right, #d6d50b, #d69b0b);
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .list__table .button_blue {
+    padding: 6px;
+    background: linear-gradient(to right, #0bb3d6, #0b70d6);
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .modal_link {
+    text-decoration: underline;
+  }
+  
+  .td-text-overflow {
+    max-width: 0;
+  }
+  
+  .a-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .list__table .button {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .list__table .button_green {
+      padding: 6px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background: linear-gradient(to right, #0bd69b, #0bb3d6);
+      text-align: center;
+    }
+  
+  }
+  
+  /* eラーニング */
+  .e-learning .p-study-progress__ttl {
+    background: linear-gradient(to right, #0bd69b, #0bb3d6);
+    position: relative;
+  }
+  
+  .e-learning .p-study-progress__ttl .title h4 {
+    top: 10%;
+    width: 37.5%;
+    margin-right: 2.5%;
+    float: left;
+    font-size: 1.25em;
+  }
+  
+  .e-learning .p-study-progress__ttl .title .study__top__graph {
+    width: 36%;
+    float: left;
+    display: block;
+    margin-right: 2%;
+  }
+  
+  .e-learning .p-study-progress__ttl .title .study__top__graph:last-child {
+    margin-right: 0;
+  }
+  
+  .e-learning .p-study-progress__ttl .study__top__graph .statusProgress-sub-graph b,
+  .study__top__graph .statusProgress-sub-graph h3 {
+    vertical-align: top;
+  }
+  
+  .e-learning .p-study-progress__ttl button {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: 15px;
+    z-index: 100;
+  }
+  
+  .e-learning .p-study-progress__ttl .graph-top {
+    width: 60%;
+  }
+  
+  .e-learning .p-study-progress__ttl .graph__bar {
+    background-color: #ED964A;
+  }
+  
+  .e-learning .p-study-progress__ttl .graph p {
+    color: #000;
+  }
+  
+  .e-learning .p-study-progress__ttl .el-information {
+    margin-top: 25px;
+  }
+  
+  .e-learning .p-study-progress__ttl .el-information .image {
+    width: 30%;
+    float: left;
+  }
+  
+  .e-learning .p-study-progress__ttl .el-information .text {
+    width: 85%;
+    /*  float: left;*/
+    float: right;
+    font-size: 1.5rem;
+    background-color: rgb(207, 250, 250);
+    color: #000;
+  }
+  
+  .e-learning .p-study-progress-inner {
+    padding: 0 50px;
+  }
+  
+  .e-learning .p-study-progress__content.js-accordion-wrap {
+    background: linear-gradient(to right, #0bd69b, #0bb3d6);
+  }
+  
+  .e-learning .p-study-progress-class-category__list {
+    display: block;
+    width: 97%;
+  }
+  
+  .e-learning .p-study-progress-course {
+    margin-bottom: 50px;
+  }
+  
+  .e-learning .p-study-progress-course:last-child {
+    margin-bottom: 0;
+  }
+  
+  .e-learning .p-study-progress-course-head .study__top__graph {
+    margin-right: 2.5%;
+  }
+  
+  .e-learning .p-study-progress-course-head .study__top__graph:last-child {
+    margin-right: 0;
+  }
+  
+  .e-learning .p-study-progress-course-head__ttl {
+    width: 100%;
+    font-size: 1.25em;
+  }
+  
+  .e-learning .p-study-progress-course-head-txt {
+    width: 95%;
+  }
+  
+  .e-learning .p-study-progress-course-head-txt .graph-top {
+    width: 60%;
+  }
+  
+  @media only screen and (max-width: 660px) {
+    .p-study-progress-course-head {
+      display: block;
+    }
+  
+    .e-learning .p-study-progress-course-head-txt .graph-top {
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .p-study-progress-course-head {
+      display: block;
+    }
+  
+    .e-learning .p-study-progress-course-head-txt .graph-top {
+      width: 60%;
+    }
+  }
+  
+  .e-learning .p-study-progress-course-head-txt .graph__bar {
+    background-color: #ED964A;
+  }
+  
+  .e-learning .p-study-progress-class-category__list .p-study-progress-course-head {
+    background-color: #FAFAF7;
+    border-radius: 6px;
+  }
+  
+  /* 教程グループ */
+  .e-learning .p-study-progress-kyotei {
+    padding: 15px;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list li {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+    margin-left: 15px;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list li:nth-child(1) {
+    margin-left: 0;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2.5%;
+    width: 2em;
+    min-width: inherit;
+    min-height: inherit;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list b {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  
+  .e-learning .p-study-progress-kyotei .kyotei-list a {
+    display: inline-block;
+    text-decoration: underline;
+  }
+  
+  .text_2 {
+    font-size: 1.5rem;
+    background-color: rgb(207, 250, 250);
+    color: #000;
+  }
+  
+  /* テキストエリア */
+  .edu_pb-form-one_column .edu_pb-form__middle-form .pb-textarea {
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: left;
+    vertical-align: bottom;
+    resize: none;
+    box-sizing: border-box;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form .pb-notice {
+    font-weight: normal;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* selectタグ */
+  .pb-select {
+    width: 100%;
+    padding: 0 24px 0 10px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #2b2b2b;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 38px;
+    font-weight: 400;
+    position: relative;
+  }
+  
+  .pb-select::before {
+    position: absolute;
+    background: url(/assets/img/common/ico-arrow-black-bold-bottom.svg) no-repeat center center/contain;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    width: 10px;
+    height: 6px;
+    padding: 0;
+    content: "";
+    pointer-events: none;
+    z-index: 9;
+  }
+  
+  /* 講座選択・コース選択 */
+  
+  .searchBox {
+    width: 100%;
+  }
+  
+  .searchBox th,
+  .searchBox td {
+    padding-bottom: 10px;
+  }
+  
+  .searchButton {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .searchButton input[type=button] {
+    padding: 10px;
+    background-color: #E8E8E2;
+    border: 1px solid #000;
+  }
+  
+  .inputBox {
+    background-color: #FAFAF7;
+    margin-bottom: 25px;
+  }
+  
+  .inputBox:last-child {
+    margin-bottom: 0;
+  }
+  
+  .inputBox th,
+  .inputBox td {
+    min-width: 20%;
+    padding: 7px;
+    vertical-align: middle;
+    text-align: left;
+  }
+  
+  .inputRadiobox {
+    margin-right: 25px;
+  }
+  
+  .inputRadiobox:last-child {
+    margin-right: 0;
+  }
+  
+  .inputBox .left {
+    width: 45%;
+    float: left;
+    border-right: 1px solid #E8E8E2;
+    padding-right: 1%;
+  }
+  
+  .inputBox .right {
+    width: 45%;
+    float: right;
+    padding-left: 1%;
+  }
+  
+  .inputBox-inbox h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  .inputBox-inbox ul {
+    padding: 10px;
+    background-color: #FFF;
+    overflow-y: scroll;
+  }
+  
+  .inputBox-inbox .searchBox {
+    margin-bottom: 10px;
+  }
+  
+  .inputBox-inbox .searchButton {
+    margin-bottom: 25px;
+  }
+  
+  .inputBox-inbox li {
+    font-size: 0.8rem;
+  }
+  
+  .inputButton {
+    text-align: center;
+  }
+  
+  /* 入れ替え */
+  .changeBox {
+    width: 10%;
+    height: 350px;
+    text-align: center;
+    float: left;
+    position: relative;
+  }
+  
+  .changeBox-inner {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    width: 100%;
+  }
+  
+  .changeBox input[type=button] {
+    padding: 10px;
+    background-color: #E8E8E2;
+    border: 1px solid #000;
+  }
+  
+  .selectedItems-list {
+    height: 350px;
+  }
+  
+  .selectedItems-list label {
+    display: inline-block;
+    width: 87.5%;
+    padding: 5px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .selectedItems-list li input[type=checkbox] {
+    visibility: hidden;
+  }
+  
+  .selectedItems-list li label::after {
+    position: absolute;
+    right: 15px;
+    top: 27.5%;
+    content: '✕';
+    visibility: visible;
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+  
+  .selectedItems-list p {
+    display: inline-block;
+  }
+  
+  .selectedItems-list a {
+    margin-left: 5px;
+    vertical-align: super;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .selectableItems-list {
+    height: 350px;
+  }
+  
+  .selectableItems-list label {
+    display: block;
+    padding: 5px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .selectableItems-list li input[type=checkbox] {
+    visibility: hidden;
+  }
+  
+  .selectableItems-list li label::after {
+    position: absolute;
+    right: 15px;
+    top: 27.5%;
+    content: '✕';
+    visibility: visible;
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+  
+  .selectableItems-list p {
+    display: inline-block;
+  }
+  
+  .selectableItems-list a {
+    margin-left: 5px;
+    vertical-align: super;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  /* 要素並び順移動 */
+  .selectItem-sort {
+    width: 10%;
+    display: inline-block;
+    vertical-align: sub;
+  }
+  
+  .selectItem-sort a {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  
+  .selectItem-sort a:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 選択講座・選択コースリスト */
+  .course-list li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e8e8e2;
+  }
+  
+  /* コース選択チェックボックス */
+  .edu_pb-checkbox {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    background: inherit;
+    border: inherit;
+  }
+  
+  /* 20220617：eラーニング（SP） */
+  @media only screen and (max-width: 896px) {
+  
+    .p-study-progress__ttl {
+      padding: 10px;
+    }
+  
+    .e-learning .p-study-progress__ttl .title h4 {
+      float: none;
+      width: 90%;
+      margin-bottom: 25px;
+    }
+  
+    .e-learning .p-study-progress__ttl .title .study__top__graph {
+      width: 90%;
+      float: none;
+      margin-bottom: 10px;
+    }
+  
+    .e-learning .p-study-progress__ttl .el-information .image {
+      width: 100%;
+      float: none;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .e-learning .p-study-progress__ttl .el-information .image img {
+      width: inherit !important;
+    }
+  
+    .e-learning .p-study-progress__ttl .el-information .text {
+      width: 100%;
+      float: none;
+    }
+  
+    .e-learning .p-study-progress-inner {
+      padding: 0;
+  
+    }
+  
+    .p-study-progress-class-category__list .p-study-progress-course-head__ico {
+      display: none;
+    }
+  
+    .e-learning .p-study-progress-class-category__list {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .p-study-progress-class-category__list .p-study-progress-course-head-txt {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .e-learning .p-study-progress-kyotei .kyotei-list a {
+      width: 82.5%;
+    }
+  
+    .e-learning .p-study-progress-kyotei .kyotei-list .icon {
+      vertical-align: top;
+    }
+  
+    .e-learning .p-study-progress-kyotei .kyotei-list li {
+      padding: 10px;
+      margin-left: 0;
+    }
+  
+    .study__top__graph .statusProgress-sub-graph b {
+      width: 15vw;
+      display: inline-block;
+    }
+  
+    .e-learning .p-study-progress-course-head .study__top__graph {
+      width: 90%;
+      margin-right: 0;
+    }
+  }
+  
+  /* ページネーション */
+  .pagination {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagination a {
+    border: 2px solid rgba(255, 0, 0, 0);
+    border-radius: 4px;
+  }
+  
+  .pagination .active a {
+    pointer-events: none;
+    border: 2px solid #000;
+    border-radius: 4px;
+  }
+  
+  /* インフォメーション */
+  #informationbuck:hover {
+    color: blue;
+  }
+  
+  #informationbuck {
+    font-size: 18px;
+  }
+  
+  
+  .information_public_date {
+    font-size: 15px;
+    opacity: 0.5;
+    font-weight: 100%;
+    color: #8B8B8B;
+    margin-top: 3%;
+    text-align: right;
+    padding-right: 1%;
+  }
+  
+  .information_title {
+    font-size: large;
+  }
+  
+  .information_content {
+    margin-top: 3%;
+  }
+  
+  .information_list_table {
+    white-space: nowrap;
+    width: 94%;
+    overflow-x: auto;
+    padding-top: 20%;
+    padding-bottom: 1%;
+    margin: 0 30px 100px;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .information_list_table {
+      margin: 0 20px 100px;
+    }
+  }
+  
+  .information_list_table table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    word-break: break-all
+  }
+  
+  .information_list_table table th,
+  .list__table table td {
+    vertical-align: middle;
+    text-align: left
+  }
+  
+  .information_list_table table th {
+    padding: 8px 15px
+  }
+  
+  .information_list_title {
+    font-weight: 500;
+    font-size: 15px;
+    padding-top: 4.5%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .information_list_table thead {
+    width: 100%;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626
+  }
+  
+  .information_list_table tbody tr {
+    transition: .2s all;
+    border-bottom: 1px solid #e8e8e2;
+    border-top: 1px solid #e8e8e2;
+    height: 80px;
+  }
+  
+  .information_list_table tbody tr:nth-child(odd) {
+    background: #FFFFFF;
+    margin-left: 100px;
+  }
+  
+  .information_list_table tbody tr:hover {
+    background: #f4f4e9;
+  }
+  
+  .information_list_table .button {
+    border: 2px solid #5F5F5F;
+    background-color: #FFF;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 896px) {
+    .information_list_table .button {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+  .information_list_public_date {
+    font-weight: 100%;
+    font-size: 15px;
+    text-align: right;
+    padding-right: 50px;
+    vertical-align: top;
+    padding-top: 2%;
+  }
+  
+  .information_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  
+  #information_search {
+    display: block;
+  }
+  
+  .information_modal-window {
+    display: none;
+  
+    position: fixed;
+    top: 48%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 40%;
+    background-color: #FAFAF7;
+    border-radius: 10px;
+    z-index: 11;
+    padding: 2rem;
+  }
+  
+  /* 閉じるボタン */
+  .information_button-close {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  
+  .information_search__contents {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .information_modal_form {
+    padding-top: 5%;
+  }
+  
+  .information_modal-search {
+    /* margin: 0 30px 40px; */
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-top: 2%;
+    height: 180px;
+  }
+  
+  .information_modal_box-width {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .information_modal_textbox {
+    width: 300px;
+  
+  }
+  
+  .information_modal_search__tag {
+    width: 100px;
+    text-align: left;
+  }
+  
+  .p-regist__data__input-ss {
+    max-width: 200px;
+  }
+  
+  .information_modal_box_input {
+    width: 32%;
+  }
+  
+  .information_search_list_btn_color {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .information_search_add_btn_color {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .information_modal_displayNum {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px;
+  }
+  
+  .information_modal_search-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 5%;
+  }
+  
+  .information_displayNum__left {
+    display: flex;
+    margin-left: 10%;
+  }
+  
+  .information_list_public_date_color {
+    opacity: 0.5;
+    color: #8B8B8B;
+  }
+  
+  .information_list_detailmove {
+    color: #000;
+  }
+  
+  .p-change-password-form-btn-set {
+    background: #bbbbbb;
+    width: 240px
+  }
+  
+  /* paginate_link */
+  .pagenate_link {
+    cursor: pointer;
+  }
+  
+  /* paginate_link_hover */
+  .pagenate_link:hover {
+    opacity: .7;
+    transition: all .25s ease-out 0s;
+  }
+  
+  /* flash_message */
+  .flash_message {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    /* height: 5%; */
+    padding: 52px 0;
+    background: #CCCCCC;
+    opacity: .88;
+    color: #666666;
+    font-size: 2.4rem;
+    font-weight: 700;
+    z-index: 99;
+    text-align: center;
+  }
+  
+  /* issued_message */
+  #issued_message {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    /* height: 5%; */
+    padding: 52px 0;
+    background: #CCCCCC;
+    opacity: .88;
+    color: #666666;
+    font-size: 2.4rem;
+    font-weight: 700;
+    z-index: 99;
+    visibility: hidden;
+    text-align: center;
+  }
+  
+  /* コース画像登録ボタン */
+  .course_image {
+    cursor: pointer;
+    width: 160px;
+    margin-right: auto;
+  }
+  
+  .image_name {
+    margin: 10px 0 0 0;
+    color: #707070;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .course_display {
+    width: 160px;
+    padding-top: 20px;
+  }
+  
+  .edu_pb-form-one_column .edu_pb-form__middle-form .error_msg {
+    width: 100%;
+  }
+  
+  .round_btn {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    /* 枠の調整 */
+    border-radius: 50%;
+    /* 丸みの度合い */
+    background: #fff;
+    /* ボタンの背景色 */
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .round_btn::before,
+  .round_btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    /* 棒の幅（太さ） */
+    height: 11px;
+    /* 棒の高さ */
+    background: #666;
+    /* バツ印の色 */
+  }
+  
+  .round_btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .round_btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .info-target-students-table {
+    width: 100%;
+  }
+  
+  .info-target-students-table thead {
+    width: 100%;
+    box-shadow: inset 0 -1px 0 0 #262626;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+  }
+  
+  .info-target-students-table th {
+    padding: 8px 8px;
+  }
+  
+  .info-target-students-table th:first-child,
+  .info-target-students-table td:first-child {
+    width: 58px;
+  }
+  
+  .info-target-students-table tr {
+    border-bottom: 1px solid #e8e8e2;
+  }
+  
+  .info-target-students-table tr:nth-child(odd) {
+    background: #fafaf7;
+  }
+  
+  .info-target-students-table td {
+    padding: 10px 24px 10px 8px;
+  }
+  
+  .info-target-students-table .c-check__label span::before,
+  .info-target-students-table .c-check__input:checked+span::before,
+  .info-target-students-table .c-check__input:checked+span::after {
+    top: -5px;
+  }
+  
+  .simplebar-wrapper {
+    max-height: 400px;
+  }
+  
+  .simplebar-mask {
+    border: solid 1px #ddd;
+    border-radius: 4px;
+  }
+  
+  /* コースライセンス付与モーダル */
+  .license_detail {
+    cursor: pointer;
+  }
+  
+  .license_detail:hover {
+    opacity: .7;
+    transition: all .25s ease-out 0s;
+  }
+  
+  .modal_overlay {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* background: rgba(0,0,0,0.6); */
+  }
+  
+  .cv-spinner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px #ddd solid;
+    border-top: 4px #2e93e6 solid;
+    border-radius: 50%;
+    animation: sp-anime 0.8s infinite linear;
+  }
+  
+  @keyframes sp-anime {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .is-hide {
+    display: none;
+  }
+  
+  /* 学習者編集ポップアップ */
+  #pop_up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 11;
+    padding: 4rem;
+    overflow-y: scroll;
+  }
+  
+  .pop_up_overlay {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .33);
+    width: 100%;
+    height: 500%;
+  }
+  
+  #popup_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e5e5d5;
+    padding: 0px 5px 6px;
+  }
+  
+  .profile-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profile-image {
+    margin-right: 10%;
+  }
+  
+  .schedule_from_box,
+  .schedule_to_box {
+    width: 123px;
+  }
+  
+  img.delete_img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  img.delete_img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  img.search_img {
+    min-width: 16px;
+    height: 16px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+    display: inline;
+  }
+  
+  .main__list--delete {
+    width: 10%;
+  }
+  
+  .main__search--lectureId {
+    width: 30%;
+  }
+  
+  .main__search--lectureTitle {
+    width: 45%;
+  }
+  
+  .main__search--input {
+    width: 100%;
+  }
+  
+  .main__submit {
+    text-align: center;
+  }
+  
+  .list-modal-footer {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  .list-modal-footer .send-mail-button {
+    width: 160px;
+    position: absolute;
+    right: 0;
+  }
+  
+  .list-modal-footer .not-send-mail-button {
+    width: 160px;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(to right, #d6a20b, #d60b0b);
+  }
+  
+  /* 企業アカウント検索欄 */
+  
+  .search__tag_account_notice {
+    width: 110px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  /* アカウント通知 */
+  .account_notice_position {
+    margin-left: 0;
+  }
+  
+  .account_notice_modal_overlay {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* background: rgba(0,0,0,0.6); */
+  }
+  
+  img.favorite_menu_star {
+      min-width: 18px;
+      max-width: 18px;
+      height: 18px;
+      vertical-align: top;
+  }
+  
+  .p-paper-table__sort-ico{
+    background: #fafaf7;
+    width: 14px;
+    height: 25px;
+    border-radius: 2px;
+    margin-left: 12px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .p-paper-table__sort-ico.is-desc::before{
+    opacity: .2;
+  }
+  
+  .p-paper-table__sort-ico.is-asc::after{
+    opacity: .2;
+  }
+  
+  .p-paper-table__sort-ico::before,.p-paper-table__sort-ico::after{
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-style: solid;
+    content: "";
+  }
+  
+  .p-paper-table__sort-ico::before{
+    bottom: 5px;
+    border-width: 4px 3px 0 3px;
+    border-color: #2b2b2b transparent transparent transparent;
+  }
+  
+  .p-paper-table__sort-ico::after{
+    top: 5px;
+    border-width: 0 3px 4px 3px;
+    border-color: transparent transparent #2b2b2b transparent;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+@media only screen and (max-width: 896px) {
+  #modal_pwd > div {
+    font-size: 16px;
+  }
+  #modal_pwd > span {
+    font-size: 14px;
+  }
+  .shown-id__message {
+    font-size: 12px;
+  }
+}

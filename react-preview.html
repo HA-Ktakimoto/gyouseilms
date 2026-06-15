@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React CDN Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function Icon({ name, className = "" }) {
+        useEffect(() => {
+          if (window.lucide) window.lucide.createIcons();
+        });
+        return <i data-lucide={name} className={className}></i>;
+      }
+
+      function App() {
+        const [isStep1Open, setIsStep1Open] = useState(true);
+        const [isStep2Open, setIsStep2Open] = useState(true);
+        const [isAiExpanded, setIsAiExpanded] = useState(false);
+        const [aiHistory, setAiHistory] = useState([]);
+        const [aiInput, setAiInput] = useState('');
+        const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+        const hasUpcomingEvent = true;
+
+        const handleAiSubmit = () => {
+          if (aiInput.trim()) {
+            setAiHistory([...aiHistory, { type: 'user', text: aiInput }]);
+            setAiInput('');
+            if (!isAiExpanded) setIsAiExpanded(true);
+          }
+        };
+
+        return (
+          <div className="w-full h-screen bg-slate-50 flex font-sans text-slate-800 shadow-xl overflow-hidden relative">
+            <aside className={`hidden lg:flex flex-col bg-white border-r border-slate-200 transition-all duration-300 z-30 ${isSidebarOpen ? 'w-64' : 'w-20'}`}>
+              <div className="h-14 flex items-center justify-between px-4 border-b border-slate-200 flex-none shrink-0">
+                {isSidebarOpen && <span className="font-bold text-sm text-slate-400 tracking-wider whitespace-nowrap">MENU</span>}
+                <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className={`text-slate-400 hover:text-cyan-600 transition-colors shrink-0 ${!isSidebarOpen && 'mx-auto'}`}>
+                  <Icon name="menu" className="w-6 h-6" />
+                </button>
+              </div>
+              <nav className="flex-1 py-4 flex flex-col gap-2 overflow-y-auto hide-scrollbar px-3">
+                <button className={`flex items-center gap-3 p-3 rounded-xl transition-colors ${isSidebarOpen ? 'hover:bg-slate-50 text-slate-600' : 'justify-center text-slate-400 hover:text-cyan-600'}`}>
+                  <Icon name="house" className={`w-6 h-6 shrink-0 ${isSidebarOpen ? 'text-cyan-600' : ''}`} />
+                  {isSidebarOpen && <span className="text-sm font-bold text-slate-800 whitespace-nowrap">ホーム</span>}
+                </button>
+                <button className={`flex items-center gap-3 p-3 rounded-xl transition-colors ${isSidebarOpen ? 'hover:bg-slate-50 text-slate-600' : 'justify-center text-slate-400 hover:text-cyan-600'}`}>
+                  <Icon name="play-circle" className="w-6 h-6 shrink-0" />
+                  {isSidebarOpen && <span className="text-sm font-bold whitespace-nowrap">コミュニケーション</span>}
+                </button>
+                <button className={`flex items-center gap-3 p-3 rounded-xl transition-colors ${isSidebarOpen ? 'hover:bg-slate-50 text-slate-600' : 'justify-center text-slate-400 hover:text-cyan-600'}`}>
+                  <Icon name="book-open" className="w-6 h-6 shrink-0" />
+                  {isSidebarOpen && <span className="text-sm font-bold whitespace-nowrap">学習関連</span>}
+                </button>
+              </nav>
+            </aside>
+
+            <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
+              <header className="flex-none h-14 bg-white border-b sticky top-0 z-20 shrink-0">
+                <div className="w-full h-full px-4 sm:px-6 flex items-center justify-between">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="font-bold text-lg text-cyan-700 tracking-wider">assist</span>
+                  </div>
+                  <div className="flex items-center justify-end gap-1 sm:gap-4 shrink-0 overflow-x-auto hide-scrollbar">
+                    <button className="flex flex-col items-center justify-center w-[4.5rem] sm:w-20 shrink-0">
+                      <div className="relative">
+                        <Icon name="info" className="w-5 h-5 text-slate-500" />
+                        <span className="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
+                      </div>
+                      <span className="text-[8px] sm:text-[9px] text-slate-600 whitespace-nowrap mt-0.5">インフォメーション</span>
+                    </button>
+                    <button className="flex flex-col items-center justify-center w-[3.5rem] sm:w-16 shrink-0">
+                      <Icon name="mail" className="w-5 h-5 text-slate-500" />
+                      <span className="text-[8px] sm:text-[9px] text-slate-600 whitespace-nowrap mt-0.5">メッセージ</span>
+                    </button>
+                    <button className="flex flex-col items-center justify-center w-[3.5rem] sm:w-16 shrink-0">
+                      <Icon name="user" className="w-5 h-5 text-slate-500" />
+                      <span className="text-[8px] sm:text-[9px] text-slate-600 whitespace-nowrap mt-0.5">受講生情報</span>
+                    </button>
+                  </div>
+                </div>
+              </header>
+
+              <main className="flex-1 overflow-y-auto pb-8 relative">
+                <section className="bg-white px-3 py-2 flex items-center gap-2 border-b border-slate-100 flex-none sticky top-0 z-10">
+                  <div className="relative flex-1 max-w-7xl mx-auto flex items-center">
+                    <div className="relative flex-1 w-full">
+                      <Icon name="search" className={`absolute left-3 w-4 h-4 text-slate-400 ${isAiExpanded ? 'top-3' : 'top-1/2 -translate-y-1/2'}`} />
+                      <textarea
+                        rows={isAiExpanded ? 3 : 1}
+                        value={aiInput}
+                        onChange={(e) => setAiInput(e.target.value)}
+                        onFocus={() => setIsAiExpanded(true)}
+                        placeholder="何でも聞いてください"
+                        className="w-full pl-9 pr-16 py-2 bg-slate-50 rounded-xl border border-slate-100 text-xs focus:ring-1 focus:ring-cyan-300 focus:bg-white resize-none transition-all duration-200"
+                      />
+                      {isAiExpanded && (
+                        <button onClick={(e) => { e.stopPropagation(); setIsAiExpanded(false); }} className="absolute right-9 top-1.5 p-1 rounded-full bg-slate-200 text-slate-500 hover:bg-slate-300 z-10 shrink-0">
+                          <Icon name="x" className="w-3.5 h-3.5 shrink-0" />
+                        </button>
+                      )}
+                      <button onClick={handleAiSubmit} className={`absolute right-1.5 ${isAiExpanded ? 'bottom-1.5' : 'top-1/2 -translate-y-1/2'} p-1.5 bg-cyan-500 text-white rounded-lg shadow-sm hover:bg-cyan-600 active:scale-95 transition-all z-10 shrink-0`}>
+                        <Icon name="send" className="w-3.5 h-3.5 shrink-0" />
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                <div className="max-w-7xl mx-auto px-3 py-4 grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+                  <section className="order-1 flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden shrink-0">
+                    <button onClick={() => setIsStep1Open(!isStep1Open)} className="w-full px-4 py-3 flex items-center justify-between bg-teal-50/30 active:bg-teal-50 shrink-0">
+                      <div className="flex items-center gap-2 shrink-0">
+                        <div className="w-1 h-4 bg-teal-500 rounded-full shrink-0"></div>
+                        <h3 className="font-bold text-teal-700 text-sm whitespace-nowrap">Step 1: 動画と課題</h3>
+                      </div>
+                      <div className="text-teal-600 lg:hidden shrink-0">
+                        <Icon name={isStep1Open ? 'chevron-up' : 'chevron-down'} className="w-5 h-5 shrink-0" />
+                      </div>
+                    </button>
+                    <div className={`${isStep1Open ? 'flex' : 'hidden lg:flex'} flex-col p-3 pt-1 gap-3 border-t border-slate-100 flex-1`}>
+                      <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl p-4 shadow-md text-left flex items-center justify-between active:scale-[0.98] transition-transform shrink-0">
+                        <div className="min-w-0 flex-1">
+                          <p className="text-white/80 text-[10px] font-bold mb-1 truncate">前回の続き</p>
+                          <h2 className="text-white text-lg font-bold leading-tight truncate">第3章 再生開始</h2>
+                        </div>
+                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm shrink-0 ml-2">
+                          <Icon name="play" className="w-5 h-5 text-teal-600 ml-0.5 shrink-0" />
+                        </div>
+                      </button>
+                    </div>
+                  </section>
+
+                  <section className="order-2 flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden shrink-0">
+                    <button onClick={() => setIsStep2Open(!isStep2Open)} className="w-full px-4 py-3 flex items-center justify-between bg-indigo-50/30 active:bg-indigo-50 shrink-0">
+                      <div className="flex items-center gap-2 shrink-0">
+                        <div className="w-1 h-4 bg-indigo-400 rounded-full shrink-0"></div>
+                        <h3 className="font-bold text-indigo-700 text-sm whitespace-nowrap">Step 2: 通学・ライブ授業</h3>
+                      </div>
+                      <div className="text-indigo-600 lg:hidden shrink-0">
+                        <Icon name={isStep2Open ? 'chevron-up' : 'chevron-down'} className="w-5 h-5 shrink-0" />
+                      </div>
+                    </button>
+                    <div className={`${isStep2Open ? 'flex' : 'hidden lg:flex'} flex-col p-3 pt-1 gap-3 border-t border-slate-100 flex-1`}>
+                      {hasUpcomingEvent && (
+                        <button className="w-full bg-indigo-50 border border-indigo-100 rounded-xl p-3 lg:p-4 flex items-center justify-between group active:bg-indigo-100 shrink-0">
+                          <div className="flex items-center gap-3 text-left min-w-0">
+                            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white rounded-full flex items-center justify-center shadow-sm shrink-0">
+                              <Icon name="calendar-days" className="w-4 h-4 lg:w-5 lg:h-5 text-indigo-600 shrink-0" />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <p className="text-[9px] lg:text-xs font-bold text-indigo-500 truncate">次回のZoom授業</p>
+                              <p className="text-xs lg:text-base font-bold text-slate-800 truncate">5/15(金) 19:00 〜</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-1 bg-indigo-600 text-white px-3 py-1.5 lg:px-4 lg:py-2 rounded-lg text-[10px] lg:text-xs font-bold shrink-0 ml-2">
+                            <Icon name="external-link" className="w-3 h-3 lg:w-4 lg:h-4 shrink-0" />
+                            参加
+                          </div>
+                        </button>
+                      )}
+                    </div>
+                  </section>
+                </div>
+              </main>
+            </div>
+
+            <style>{`
+              main::-webkit-scrollbar { display: none; }
+              .hide-scrollbar::-webkit-scrollbar { display: none; }
+              .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+            `}</style>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
