@@ -456,7 +456,7 @@ body { background: var(--v3-bg); }
 .p-study-progress-class-category__list > .p-study-progress__content > .p-study-progress-course-head .p-study-progress-course-head-txt .study__top__graph:not([style*="visibility:hidden"]) {
   display: flex !important;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   flex-shrink: 0;
   margin-left: auto;
   width: auto !important;
