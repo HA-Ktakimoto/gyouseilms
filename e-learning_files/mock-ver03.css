@@ -286,6 +286,9 @@ body { background: var(--v3-bg); }
   border-bottom: 1px solid var(--v3-border) !important;
   gap: 10px;
 }
+.e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head:has(.p-study-progress-course-head__ico:not(.is-open)) {
+  border-bottom: 0 !important;
+}
 .e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head .p-study-progress-course-head-txt {
   flex: 1;
   min-width: 0;
