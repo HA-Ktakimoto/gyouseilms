@@ -591,6 +591,9 @@ body { background: var(--v3-bg); }
    ============================================================ */
 
 .statusProgress-sub-graph > b { display: none !important; }
+.p-study-progress-class-category__list .study__top__graph .statusProgress-sub-graph .graph.graph-top {
+  display: none !important;
+}
 /* カテゴリ行のグラフコンテナ内の sub-graph ボックスを非表示 */
 .p-study-progress-class-category__list .study__top__graph .statusProgress-sub-graph {
   display: contents !important;
