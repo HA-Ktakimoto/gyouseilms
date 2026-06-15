@@ -744,7 +744,8 @@ body { background: var(--v3-bg); }
   .p-study-progress__ttl .v3-top-ring {
     grid-column: 2 !important;
     grid-row: 1 !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
+    justify-self: end !important;
     position: static !important;
     align-self: center !important;
   }
