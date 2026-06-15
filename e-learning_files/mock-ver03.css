@@ -780,7 +780,15 @@ body { background: var(--v3-bg); }
   }
   .p-study-progress__ttl {
     min-height: 0 !important;
-    column-gap: 10px !important;
+    column-gap: 4px !important;
+    padding: 16px 8px 16px 20px !important;
+  }
+  .p-study-progress__ttl .graph.graph-top {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .p-study-progress__ttl .graph.graph-top p {
+    font-size: 0.9rem !important;
   }
 
   /* 研修タイトル行：タイトル折り返し許可 */
