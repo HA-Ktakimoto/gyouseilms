@@ -24,11 +24,11 @@ body { background: var(--v3-bg); }
 .v3-footer {
   text-align: center;
   padding: 24px 16px;
-  margin-top: 40px;
+  background-color: var(--v3-accent);
 }
 .v3-footer__copy {
   font-size: 1.1rem;
-  color: #a0a0a0;
+  color: #fff;
 }
 .l-main { background: var(--v3-bg); }
 
