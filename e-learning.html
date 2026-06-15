@@ -4273,6 +4273,9 @@
             head.style.cursor = "pointer";
             var kyotei = head.nextElementSibling;
             if (!kyotei) return;
+            // 初期状態：閉じておく
+            kyotei.style.display = "none";
+            head.classList.add("v3-cat-closed");
             head.addEventListener("click", function () {
                 var isOpen = kyotei.style.display !== "none";
                 kyotei.style.display = isOpen ? "none" : "";
