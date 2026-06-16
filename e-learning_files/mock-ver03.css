@@ -137,14 +137,7 @@ body { background: var(--v3-bg); }
   min-height: 122px !important;
 }
 
-/* 完了コース → ティール枠 */
-/* 100%完了：カード枠を濃いティールに */
-.p-study-progress__ttl:has(.graph.graph-top.is-complete) {
-  border-color: var(--v3-accent-deep) !important;
-}
-.p-study-progress__ttl:has(.graph.graph-top.is-complete) + .p-study-progress-course {
-  border-color: var(--v3-accent-deep) !important;
-}
+/* 完了コースの枠線は変化なし */
 
 /* Grid 配置 */
 .p-study-progress__ttl .title {
@@ -331,7 +324,10 @@ body { background: var(--v3-bg); }
   font-size: 1.1rem !important;
   font-weight: 700;
   line-height: 1.2;
+  color: #7c7c7c;
 }
+.graph.graph-top.is-progress .v3-ring-pct { color: var(--v3-accent); }
+.graph.graph-top.is-complete .v3-ring-pct { color: var(--v3-accent); }
 .v3-ring-frac {
   font-size: 0.9rem;
   font-weight: 400;
@@ -633,7 +629,7 @@ body { background: var(--v3-bg); }
   background: conic-gradient(var(--v3-accent) 0 var(--progress), var(--v3-ring-empty) var(--progress) 100%);
 }
 .graph.graph-top.is-complete {
-  background: conic-gradient(var(--v3-accent-deep) 0 100%);
+  background: conic-gradient(var(--v3-accent) 0 100%);
 }
 .graph.graph-top .graph__bar { display: none !important; }
 .graph.graph-top p {
@@ -641,12 +637,12 @@ body { background: var(--v3-bg); }
   z-index: 2;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #7c7c7c;
+  color: #7c7c7c !important;
   line-height: 1.15;
   text-align: center;
 }
-.graph.graph-top.is-progress p { color: var(--v3-accent); }
-.graph.graph-top.is-complete p { color: var(--v3-accent-deep); }
+.graph.graph-top.is-progress p { color: var(--v3-accent) !important; }
+.graph.graph-top.is-complete p { color: var(--v3-accent) !important; }
 
 /* ============================================================
    レスポンシブ
