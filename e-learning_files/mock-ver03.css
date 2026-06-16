@@ -185,7 +185,7 @@ body { background: var(--v3-bg); }
   width: 130px;
   height: 90px;
   border-radius: 6px;
-  background: #dedede;
+  background: #eff6f8 url('./elearning_nodata_thumbnail.svg') center / 45% auto no-repeat;
 }
 .e-learning .p-study-progress__ttl .title h4::after {
   display: none;
