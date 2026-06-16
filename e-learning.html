@@ -267,20 +267,21 @@
             });
         });
 
-        // p-study-progress-course-head__ico ボタン専用：クリックで直接開閉
+        // 研修タイトル行（BOX全体）クリックで開閉
         document.addEventListener("click", function(e) {
-            const btn = e.target.closest(".p-study-progress-course-head__ico.js-accordion-trigger");
-            if (!btn) return;
-            const wrap = btn.closest(".js-accordion-wrap");
+            const head = e.target.closest(".e-learning .p-study-progress__content.js-accordion-wrap > .p-study-progress-course-head");
+            if (!head) return;
+            const wrap = head.closest(".js-accordion-wrap");
             if (!wrap) return;
             const content = wrap.querySelector(".js-accordion-content");
             if (!content) return;
+            const btn = head.querySelector(".p-study-progress-course-head__ico.js-accordion-trigger");
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
-                btn.classList.add("is-open");
+                if (btn) btn.classList.add("is-open");
             } else {
                 content.style.display = "none";
-                btn.classList.remove("is-open");
+                if (btn) btn.classList.remove("is-open");
             }
         });
 
